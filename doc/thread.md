@@ -67,7 +67,7 @@ Tobias Beer 2015-11-07
 
 Hi Christopher,
 
-As Tinka stands, checking each checkbox is a too troublesome.
+> As Tinka stands, checking each checkbox is a too troublesome.
 
 I very much agree, without some check-all option, setting it up ain't fun at all.
 
