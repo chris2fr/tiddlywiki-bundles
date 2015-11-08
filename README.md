@@ -39,3 +39,5 @@ It would be nice to set up translations of the plugin.
 I would like to be able to commit changed Tiddlers to the source wiki as change sets for merge.
 
 I would like to version the Wikis through Git on the Plugin server, somehow.
+
+Perhaps the plugin could be included in the core some day.
