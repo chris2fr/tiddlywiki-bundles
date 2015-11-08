@@ -1,6 +1,6 @@
-# TiddlyWiki as Plugin
+# AsPlugin
 
-TiddlyWiki as Plugin is a TiddlyWiki plugin which aims to automagically manage content from TiddlyWiki wikis as plugins themselves. The idea is to "import" other wikis into a current wiki with the plugin mechanism. The plugin mechanism is powerful because of shadow tiddlers. Shadow tiddlers are a kind of version control in TiddlyWiki.
+AsPlugin is a TiddlyWiki plugin which aims to automagically manage content from TiddlyWiki wikis as plugins themselves. The idea is to "import" other wikis into a current wiki with the plugin mechanism. The plugin mechanism is powerful because of shadow tiddlers. Shadow tiddlers are a kind of version control in TiddlyWiki.
 
 Right now, AsPlugin proposes an additional export filter regrouping all selected Tiddlers in a configured plugin from the export menu in the wiki, the search or the advanced search interfaces.After having exported the tiddlers as a plugin in a .tid file, you can then import the .tid file into any other wiki. The .tid file is actually a plugin, and all the included tiddlers become shadow tiddlers of that plugin. 
 
