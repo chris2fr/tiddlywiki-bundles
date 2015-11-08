@@ -34,6 +34,8 @@ It would be nice to use that plugin to create the GitHub plugin for my TiddlyWik
 
 Perhaps I can create a dedicated wiki to TiddlyWikiAsPlugin. I could then share that wiki on TWGuides.org.
 
+It would be nice to set up translations of the plugin.
+
 I would like to be able to commit changed Tiddlers to the source wiki as change sets for merge.
 
 I would like to version the Wikis through Git on the Plugin server, somehow.
