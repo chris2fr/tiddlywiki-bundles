@@ -6,7 +6,7 @@ type: application/x-tiddler-dictionary
 authorusername:yourname
 pluginname:yourwiki
 title:$:/plugins/{{##authorusername}}/{{##pluginname}}
-description:As Plugin
+description:Your Wiki Description
 # This is a tag or tags we add to better keep track
 extratag:FromAsPlugin
 version:0.0.1-asof<<now YYYY0MM0DD0hh0mm>>
