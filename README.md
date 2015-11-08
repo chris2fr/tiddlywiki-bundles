@@ -22,7 +22,7 @@ For example, to create this plugin, I did an advanced search with the filter "[t
 
 I would like to setup a "library source" where the exported plugins could be sent to a library on a public server for update on distributed wikis.
 
-I also would like to register this plugin in a library.
+I also would like to register this plugin in a library. Perhaps TWGuides at http://twguides.org.
 
 I would like to be able to commit changed Tiddlers to the source wiki as change sets for merge.
 
