@@ -1,0 +1,27 @@
+# George wants subwikis to be up-to-date in order to plan his activities transversally.
+
+GeorgeGeek is someone who uses an iPad to edit wikis offline. Each wiki is topical, and George can share entire wikis with contacts. It is also easy for George to treat each subject as a separate wiki.
+
+
+
+Acceptance criteria is :
+
+1. GeorgeGeek can modify a sub-wiki file
+1. GeorgeGeek can modify a meta-wiki file
+1. GeorgeGeek will consult the sub-wiki tiddler updated from the meta-wiki file
+
+Implementation ideas :
+
+Get an Android tablet and do the following, or write a new iPad app that could do the following, or get an iPad developer to modify his or her code for the following:
+
+Create an WikiAsPlugin plugin. Exporting a wiki as a plugin will effectively allow the subwiki to be loaded into the meta wiki without having to restart either a node-js instance nor need to duplicate tiddlers in a current wiki file.
+
+
+
+WikiAsPlugin would **mainly have an export function**. The exported plugin would then replace the currently installed plugin with fresher content. Other functions could be :
+
+* viewing changes to shadow tiddlers
+* exporting changes from shadow tiddlers on meta-wiki
+* importing changes from meta-wiki into sub-wiki
+
+George, being a geek, would GIT-version the wiki-as-a-plugin and sychronize it with a node-js instance, etc.
