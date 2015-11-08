@@ -30,6 +30,10 @@ I also would like to register this plugin in a library. Perhaps TWGuides at http
 
 It would be nice to have a front-end to the config data tiddler.
 
+It would be nice to use that plugin to create the GitHub plugin for my TiddlyWiki on this subject.
+
+Perhaps I can create a dedicated wiki to TiddlyWikiAsPlugin. I could then share that wiki on TWGuides.org.
+
 I would like to be able to commit changed Tiddlers to the source wiki as change sets for merge.
 
 I would like to version the Wikis through Git on the Plugin server, somehow.
