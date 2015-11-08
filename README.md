@@ -22,7 +22,7 @@ To configure, please change the variables in $:/plugins/mannfr/asplugin/config.
 
 For example, to create this plugin, I did an advanced search with the filter "[tag[TiddlyWikiAsPlugin]]" and then simply exported the results as a plugin.
 
-## AsPlugin Back to the Future
+## Back to the Future
 
 I would like to setup a "library source" where the exported plugins could be sent to a library on a public server for update on distributed wikis.
 
