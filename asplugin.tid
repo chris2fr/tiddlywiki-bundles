@@ -1,8 +1,8 @@
 author: Christopher Mann <christopher@mann.fr>
 core-version: >=5.0.0
 dependents:
-description: AsPlugin for exporting TiddlyWiki wiki content tiddlers as a configured dynamic plugin and more
-list: readme
+description: AsPlugin - Export Tiddlers as a Plugin
+list: readme usage
 plugin-type: plugin
 revision: 0
 source: https://github.com/chris2fr/tiddlywiki-as-plugin
@@ -46,6 +46,12 @@ version: 5.1.9
             "title": "$:/plugins/chris2fr/asplugin/readme",
             "type": "text/vnd.tiddlywiki",
             "text": "<h1>AsPlugin</h1>\n\nAsPlugin is a ~TiddlyWiki plugin which aims to automagically manage content from ~TiddlyWiki wikis as plugins themselves. The idea is to \"import\" other wikis into a current wiki with the plugin mechanism. The plugin mechanism is powerful because of shadow tiddlers. Shadow tiddlers are a kind of version control in ~TiddlyWiki.\n\nRight now, AsPlugin proposes an additional export filter regrouping all selected tiddlers in a configured plugin from the export menu in the wiki, the search or the advanced search interfaces.After having exported the tiddlers as a plugin in a .tid file, you can then import the .tid file into any other wiki. The .tid file is actually a plugin, and all the included tiddlers become shadow tiddlers of that plugin.\n\nIn the future, I would like to explore using other features of the plugin mechanism. The library server could be a way to centralize changes to plugged-out ~TiddlyWikis for automagic updates to the including ~TiddlyWikis. Changes on the including ~TiddlyWikis could be proposed to the included ~TiddlyWiki for update, if desired: incorporate back and delete.\n\nThe .tid file for import is here :\n\nhttps://raw.githubusercontent.com/chris2fr/tiddlywiki-as-plugin/master/build/asplugin.tid\n\nYou need to save that to your local filesystem, take off the .txt extension, then import it into your wiki for now.\n\nSource : https://github.com/chris2fr/tiddlywiki-as-plugin/\n\n<h2>Usage</h2>\n\nThis is an additional export filter. Save the file as a .tid, for example for \"All Tiddlers\" in the side-menu. Save the file. Import the file into another Wiki.\n\nTo configure, please change the variables in [[$:/plugins/chris2fr/asplugin/config]] .\n\nFor example, to create this plugin, I did an advanced search with the filter \"[tag[AsPlugin]]\" and then simply exported the results as a plugin.\n\n<h2>Roadmap</h2>\n\nI would like to setup a \"library source\" where the exported plugins could be sent to a library on a public server for update on distributed wikis.\n\nI also would like to register this plugin in a library. Perhaps TWGuides at http://twguides.org.\n\nIt would be nice to have a front-end to the config data tiddler.\n\nIt would be nice to use that plugin to create the GitHub plugin for my ~TiddlyWiki on this subject.\n\nPerhaps I can create a dedicated wiki to AsPlugin. I could then share that wiki on TWGuides.org.\n\nIt would be nice to set up translations of the plugin.\n\nI would like to be able to commit changed Tiddlers to the source wiki as change sets for merge.\n\nI would like to version the Wikis through Git on the Plugin server, somehow.\n\nPerhaps the plugin could be included in the core some day.\n\n<h2>Notes</h2>\n\nThis file is maintained in the ./source/readme.tid and copied to ./README.md.\n"
+        },
+        "$:/plugins/chris2fr/asplugin/usage": {
+            "tags": "AsPlugin",
+            "title": "$:/plugins/chris2fr/asplugin/usage",
+            "type": "text/vnd.tiddlywiki",
+            "text": "!AsPlugin Usage\n\n# ''Before all else'' please configure the name of the export wiki here: [[$:/plugins/chris2fr/asplugin/config]].\n# Export the tiddlers you are interested in via an export dialogue (arrow facing up in an open box).\n#* Either all the tiddlers of this ~TiddlyWiki with the \"Export All\" option in the sidebar\n#* Or results of an $:/AdvancedSearch if you want a subset\n# Save that file somewhere, such as \"Downloads\"\n# Import that \"tiddlers.tid\" file to a target wiki (not the wiki you exported from)\n\nThat's it.\n\nIt would be nice to just drag and drop the package elsewhere, but I haven't quite figured that out yet.\n"
         }
     }
 }
