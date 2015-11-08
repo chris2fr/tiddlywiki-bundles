@@ -14,7 +14,7 @@ You need to save that to your local filesystem, take off the .txt extension, the
 
 Source : https://github.com/chris2fr/tiddlywiki-as-plugin/
 
-## Use
+## Usage
 
 This is an additional export filter. Save the file as a .tid, for example for "All Tiddlers" in the side-menu. Save the file. Import the file into another Wiki.
 
