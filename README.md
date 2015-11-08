@@ -1,8 +1,14 @@
 # TiddlyWiki as Plugin
 
-Source : https://github.com/chris2fr/tiddlywiki-as-plugin/
-
 TiddlyWiki as Plugin is a TiddlyWiki plugin to automagically manage content from TiddlyWiki wikis as plugins themselves.
+
+The .tid file for import is here :
+
+https://raw.githubusercontent.com/chris2fr/tiddlywiki-as-plugin/master/build/asplugin.tld
+
+I suppose you could just drag that file to your TiddlyWiki to install the plugin.
+
+Source : https://github.com/chris2fr/tiddlywiki-as-plugin/
 
 ## For now
 
@@ -15,6 +21,8 @@ For example, to create this plugin, I did an advanced search with the filter "[t
 ## For the future
 
 I would like to setup a "library source" where the exported plugins could be sent to a library on a public server for update on distributed wikis.
+
+I also would like to register this plugin in a library.
 
 I would like to be able to commit changed Tiddlers to the source wiki as change sets for merge.
 
