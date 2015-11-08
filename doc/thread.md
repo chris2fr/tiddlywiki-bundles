@@ -2,7 +2,7 @@
 
 See also https://groups.google.com/d/msg/tiddlywiki/HrL5owEOJKM/ywe5EU9WAQAJ
 
-See also [./george.md]().
+See also [./george.md](./george.md).
 
 ---
 
