@@ -1,6 +1,6 @@
-# TiddlyWikis as Plugins
+# TiddlyWiki as Plug
 
-Source : https://github.com/chris2fr/tiddlywikis-as-plugins/
+Source : https://github.com/chris2fr/tiddlywiki-as-plug/
 
 TiddlyWikis as Plugins is a TiddlyWiki plugin to automagically manage content from TiddlyWiki wikis as plugins themselves.
 
@@ -11,3 +11,13 @@ This is an additional export filter. Save the file as a .tld, for example for "A
 To configure, please change the variables in $:/plugins/mannfr/twaap/config.
 
 For example, to create this plugin, I did an advanced search with the filter "[tag[TiddlyWikiAsAPlugin]]" and then simply exported the results as a plugin.
+
+## For the future
+
+I would like to setup a "library source" where the exported plugins could be sent to a library on a public server for update on distributed wikis.
+
+I would like to be able to commit changed Tiddlers to the source wiki as change sets for merge.
+
+I would like to version the Wikis through Git on the Plugin server.
+
+I would like to concur the world.
