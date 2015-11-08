@@ -1,0 +1,25 @@
+created: 20151106215643136
+description: ~TwiddlyWiki as Plugin (.tid)
+extension: .tid
+modified: 20151108120511314
+tags: $:/tags/Exporter AsPlugin
+title: $:/plugins/chris2fr/asplugin/export
+type: text/vnd.tiddlywiki
+
+\define renderContent( extratag:"""FromAsPlugin""" )
+<$text text=<<plugintiddlers filter:"""$(exportFilter)$""" extratag:"""$extratag$""">>/>
+\end
+author:{{$:/plugins/chris2fr/asplugin/config##author}}
+description: {{$:/plugins/chris2fr/asplugin/config##description}}
+list:{{$:/plugins/chris2fr/asplugin/config##list}}
+plugin-type: plugin
+title:{{$:/plugins/chris2fr/asplugin/config##title}}
+type:application/json
+version:{{$:/plugins/chris2fr/asplugin/config##version}}
+extratag:{{$:/plugins/chris2fr/asplugin/config##extratag}}
+"""
+
+"""
+<$set name="extrataginput" value={{$:/plugins/chris2fr/asplugin/config##extratag}}>
+<<renderContent extratag:"""$(extrataginput)$""">>
+</$set>

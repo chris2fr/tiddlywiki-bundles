@@ -1,7 +1,7 @@
 created: 20151107081239777
 modified: 20151108120742009
 tags: AsPlugin
-title: $:/plugins/mannfr/asplugin/readme
+title: $:/plugins/chris2fr/asplugin/readme
 type: text/vnd.tiddlywiki
 
 <h1>AsPlugin</h1>
@@ -24,7 +24,7 @@ Source : https://github.com/chris2fr/tiddlywiki-as-plugin/
 
 This is an additional export filter. Save the file as a .tid, for example for "All Tiddlers" in the side-menu. Save the file. Import the file into another Wiki.
 
-To configure, please change the variables in [[$:/plugins/mannfr/asplugin/config]] .
+To configure, please change the variables in [[$:/plugins/chris2fr/asplugin/config]] .
 
 For example, to create this plugin, I did an advanced search with the filter "[tag[AsPlugin]]" and then simply exported the results as a plugin.
 
