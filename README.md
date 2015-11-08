@@ -16,7 +16,7 @@ This is an additional export filter. Save the file as a .tld, for example for "A
 
 To configure, please change the variables in $:/plugins/mannfr/asplugin/config.
 
-For example, to create this plugin, I did an advanced search with the filter "[tag[TiddlyWikiAsAPlugin]]" and then simply exported the results as a plugin.
+For example, to create this plugin, I did an advanced search with the filter "[tag[TiddlyWikiAsPlugin]]" and then simply exported the results as a plugin.
 
 ## For the future
 
