@@ -1,0 +1,24 @@
+created: 20151106215643136
+description: ~TwiddlyWiki as Plugin (.tid)
+extension: .tld
+modified: 20151108084336389
+tags: $:/tags/Exporter TiddlyWikiAsPlugin
+title: $:/plugins/mannfr/asplugin/export
+
+\define renderContent( extratag:"""FromAsPlugin""" )
+<$text text=<<plugintiddlers filter:"""$(exportFilter)$""" extratag:"""$extratag$""">>/>
+\end
+author:{{$:/plugins/mannfr/asplugin/config##author}}
+description: {{$:/plugins/mannfr/asplugin/config##description}}
+list:{{$:/plugins/mannfr/asplugin/config##list}}
+plugin-type: plugin
+title:{{$:/plugins/mannfr/asplugin/config##title}}
+type:application/json
+version:{{$:/plugins/mannfr/asplugin/config##version}}
+extratag:{{$:/plugins/mannfr/asplugin/config##extratag}}
+"""
+
+"""
+<$set name="extrataginput" value={{$:/plugins/mannfr/asplugin/config##extratag}}>
+<<renderContent extratag:"""$(extrataginput)$""">>
+</$set>

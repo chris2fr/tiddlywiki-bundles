@@ -1,0 +1,47 @@
+author:Christopher Mann 
+description: As Plugin
+list:readme
+plugin-type: plugin
+title:$:/plugins/mannfr/asplugin
+type:application/json
+version:0.0.4-beta201511080946
+extratag:FromAsPlugin
+
+
+{
+    "tiddlers": {
+        "$:/plugins/mannfr/asplugin/readme": {
+            "created": "20151107081239777",
+            "text": "!TiddlyWiki \"as Plugin\" For Now\n\nThis is an additional export filter. Save the file as a .tld, for example for \"All Tiddlers\" in the side-menu. Save the file. Import the file into another Wiki.\n\nTo configure, please change the variables in [[$:/plugins/mannfr/asplugin/config]].\n\nFor example, to create this plugin, I did an advanced search with the filter \"[tag[~TiddlyWikiAsPlugin]]\" and then simply exported the results as a plugin.\n\nSource : https://github.com/chris2fr/tiddlywiki-as-plugin\n\n!For the Future\n\nI would like to setup a \"library source\" where the exported plugins could be sent to a library on a public server for update on distributed wikis.\n\nI would like to be able to commit changed Tiddlers to the source wiki as change sets for merge.\n\nI would like to version the Wikis through Git on the Plugin server.\n\nI would like to concur the world.",
+            "modified": "20151108084140620",
+            "tags": "TiddlyWikiAsPlugin FromAsPlugin",
+            "title": "$:/plugins/mannfr/asplugin/readme"
+        },
+        "$:/plugins/mannfr/asplugin/plugintiddlers": {
+            "created": "20151106222453723",
+            "text": "/*\\\ntitle: plugintiddlers\ntype: application/javascript\nmodule-type: macro\n\nMacro to output tiddlers matching a filter to Plugin\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\"use strict\";\n\n/*\nInformation about this macro\n*/\n\nexports.name = \"plugintiddlers\";\n\nexports.params = [\n\t{name: \"filter\"},\n\t{name: \"extratag\",\n\tdefault: \"FromTiddlyWikiAsAPlugin\"}\n];\n\n/*\nRun the macro\n*/\nexports.run = function(filter, extratag) {\n\tvar data = {tiddlers: {}};\n\tvar tiddlers = this.wiki.filterTiddlers(filter);\n\tfor(var t=0;t<tiddlers.length; t++) {\n\t\tvar tiddler = this.wiki.getTiddler(tiddlers[t]);\n\t\tif(tiddler) {\n\t\t\tvar fields = new Object();\n\t\t\tfor(var field in tiddler.fields) {\n\t\t\t\tfields[field] = tiddler.getFieldString(field);\n\t\t\t}\n\t\t\tdata[\"tiddlers\"][fields[\"title\"]] = fields;\n\t\t\tif (!(\"tags\" in data[\"tiddlers\"][fields[\"title\"]])) {\n\t\t\t   data[\"tiddlers\"][fields[\"title\"]][\"tags\"] = \"\";\n\t\t\t}\n\t\t\tif( !(data[\"tiddlers\"][fields[\"title\"]][\"tags\"].indexOf(extratag) >= 0)) {\n\t\t\t\tdata[\"tiddlers\"][fields[\"title\"]][\"tags\"] += \" \" + extratag;\n\t\t\t}\n                        data[\"tiddlers\"][fields[\"title\"]][\"tags\"] = data[\"tiddlers\"][fields[\"title\"]][\"tags\"].trim();\n\t\t}\n\t}\n\treturn JSON.stringify(data,null,$tw.config.preferences.jsonSpaces);\n};\n\n})();\n",
+            "modified": "20151108084201015",
+            "module-type": "macro",
+            "title": "$:/plugins/mannfr/asplugin/plugintiddlers",
+            "type": "application/javascript",
+            "tags": "TiddlyWikiAsPlugin FromAsPlugin"
+        },
+        "$:/plugins/mannfr/asplugin/export": {
+            "created": "20151106215643136",
+            "text": "\\define renderContent( extratag:\"\"\"FromAsPlugin\"\"\" )\n<$text text=<<plugintiddlers filter:\"\"\"$(exportFilter)$\"\"\" extratag:\"\"\"$extratag$\"\"\">>/>\n\\end\nauthor:{{$:/plugins/mannfr/asplugin/config##author}}\ndescription: {{$:/plugins/mannfr/asplugin/config##description}}\nlist:{{$:/plugins/mannfr/asplugin/config##list}}\nplugin-type: plugin\ntitle:{{$:/plugins/mannfr/asplugin/config##title}}\ntype:application/json\nversion:{{$:/plugins/mannfr/asplugin/config##version}}\nextratag:{{$:/plugins/mannfr/asplugin/config##extratag}}\n\"\"\"\n\n\"\"\"\n<$set name=\"extrataginput\" value={{$:/plugins/mannfr/asplugin/config##extratag}}>\n<<renderContent extratag:\"\"\"$(extrataginput)$\"\"\">>\n</$set>\n",
+            "description": "~TwiddlyWiki as Plugin (.tid)",
+            "extension": ".tld",
+            "modified": "20151108084336389",
+            "tags": "$:/tags/Exporter TiddlyWikiAsPlugin FromAsPlugin",
+            "title": "$:/plugins/mannfr/asplugin/export"
+        },
+        "$:/plugins/mannfr/asplugin/config": {
+            "created": "20151107073238652",
+            "text": "# Title must follow convention for plugins, such as $:/plugins/author/plugin_name\nauthorusername:mannfr\npluginname:asplugin\ntitle:$:/plugins/{{##authorusername}}/{{##pluginname}}\ndescription:As Plugin\n# This is a tag or tags we add to better keep track\nextratag:FromAsPlugin\nversion: 0.0.4-beta<<now YYYY0MM0DD0hh0mm>>\nauthor: Christopher Mann <christopher@mann.fr>\n# List is the files in $:/plugins/{{##authorusername}}/{{##pluginname}} for the control panel\nlist: readme\nsource: https://github.com/chris2fr/tiddlywiki-as-plugin\nfilename:$__plugins_{{##authorusername}}/{{##pluginname}}-{{##version}}\n",
+            "modified": "20151108084624693",
+            "tags": "TiddlyWikiAsPlugin FromAsPlugin",
+            "title": "$:/plugins/mannfr/asplugin/config",
+            "type": "application/x-tiddler-dictionary"
+        }
+    }
+}

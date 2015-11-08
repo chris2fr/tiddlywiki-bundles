@@ -1,0 +1,7 @@
+author:Christopher Mann
+description:As Plugin
+list:readme
+plugin-type: plugin
+title:$:/plugins/mannfr/asplugin
+type:application/json
+version:0.0.4-beta201511080950
