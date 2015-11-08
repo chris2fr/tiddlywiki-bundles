@@ -6,7 +6,7 @@ The .tid file for import is here :
 
 https://raw.githubusercontent.com/chris2fr/tiddlywiki-as-plugin/master/build/asplugin.tld
 
-I suppose you could just drag that file to your TiddlyWiki to install the plugin.
+You need to save that to your local filesystem, take off the .txt extension, then import it into your wiki for now. 
 
 Source : https://github.com/chris2fr/tiddlywiki-as-plugin/
 
