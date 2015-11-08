@@ -1,0 +1,8 @@
+{
+	"title": "$:/plugins/mannfr/asplugin",
+	"description": "AsPlugin for exporting TiddlyWiki wiki content tiddlers as a configured dynamic plugin and more",
+	"author": "Christopher Mann <christopher@mann.fr>",
+	"core-version": ">=5.0.0",
+	"list": "readme",
+        "source": "https://github.com/chris2fr/tiddlywiki-as-plugin"
+}
