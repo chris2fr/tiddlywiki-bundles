@@ -28,6 +28,8 @@ I would like to setup a "library source" where the exported plugins could be sen
 
 I also would like to register this plugin in a library. Perhaps TWGuides at http://twguides.org.
 
+It would be nice to have a front-end to the config data tiddler.
+
 I would like to be able to commit changed Tiddlers to the source wiki as change sets for merge.
 
 I would like to version the Wikis through Git on the Plugin server, somehow.
