@@ -4,9 +4,9 @@ TiddlyWiki as Plugin is a TiddlyWiki plugin to automagically manage content from
 
 The .tid file for import is here :
 
-https://raw.githubusercontent.com/chris2fr/tiddlywiki-as-plugin/master/build/asplugin.tld
+https://raw.githubusercontent.com/chris2fr/tiddlywiki-as-plugin/master/build/asplugin.tid
 
-You need to save that to your local filesystem, take off the .txt extension, then import it into your wiki for now. 
+You need to save that to your local filesystem, take off the .txt extension, then import it into your wiki for now.
 
 Source : https://github.com/chris2fr/tiddlywiki-as-plugin/
 
