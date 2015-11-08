@@ -5,7 +5,7 @@ type: text/vnd.tiddlywiki
 !AsPlugin Usage
 
 # ''Before all else'' please configure the name of the export wiki here: [[$:/plugins/chris2fr/asplugin/config]].
-# Export the tiddlers you are interested in via an export dialogue (arrow facing up in an open box).
+# Export the tiddlers you are interested in via an export dialogue {{$:/core/images/export-button}} (arrow facing up in an open box).
 #* Either all the tiddlers of this ~TiddlyWiki with the "Export All" option in the sidebar
 #* Or results of an $:/AdvancedSearch if you want a subset
 # Save that file somewhere, such as "Downloads"
