@@ -3,7 +3,7 @@
 	"description": "AsPlugin - Export Tiddlers as a Plugin",
 	"author": "Christopher Mann <christopher@mann.fr>",
 	"core-version": ">=5.0.0",
-	"list": "readme usage",
+	"list": "readme usage config",
   "source": "https://github.com/chris2fr/tiddlywiki-as-plugin",
-	"version": "0.0.5-beta201511081439"
+	"version": "0.0.8"
 }

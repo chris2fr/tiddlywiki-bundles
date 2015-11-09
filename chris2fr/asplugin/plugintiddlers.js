@@ -1,8 +1,3 @@
-module-type: macro
-tags: AsPlugin
-title: $:/plugins/chris2fr/asplugin/plugintiddlers
-type: application/javascript
-
 /*\
 title: plugintiddlers
 type: application/javascript
@@ -25,16 +20,19 @@ exports.name = "plugintiddlers";
 
 exports.params = [
 	{name: "filter"},
-	{name: "extratag",
-	default: "FromTiddlyWikiAsAPlugin"}
+	{name: "authorlogin",
+	default: "yourname"},
+	{name: "WikiShortCamelName",
+	default: "YourWiki"}
 ];
 
 /*
 Run the macro
 */
-exports.run = function(filter, extratag) {
+exports.run = function(filter, authorlogin, WikiShortCamelName) {
 	var data = {tiddlers: {}};
 	var tiddlers = this.wiki.filterTiddlers(filter);
+	var extratag = authorlogin.replace("[^a-zA-Z0-9]","") + "/" + WikiShortCamelName.replace("[^a-zA-Z0-9]","");
 	for(var t=0;t<tiddlers.length; t++) {
 		var tiddler = this.wiki.getTiddler(tiddlers[t]);
 		if(tiddler) {
@@ -53,7 +51,13 @@ exports.run = function(filter, extratag) {
 			if( !(data["tiddlers"][fields["title"]]["tags"].indexOf(extratag) >= 0)) {
 				data["tiddlers"][fields["title"]]["tags"] += " " + extratag;
 			}
-      		data["tiddlers"][fields["title"]]["tags"] = data["tiddlers"][fields["title"]]["tags"].trim();	
+      data["tiddlers"][fields["title"]]["tags"] = data["tiddlers"][fields["title"]]["tags"].trim();
+			// adding an extra tiddler for deltas
+			data["tiddlers"]["$:/plugins/" + extratag + "/deltas"] = {
+				"title":"$:/plugins/" + extratag + "/deltas",
+				"tags":extratag,
+				"text":"!Deltas on local wiki\n\n[asplugin[" + extratag + "]]\n\n{{{[asplugin[" + extratag + "]]}}}"
+			};
 		}
 	}
 	return JSON.stringify(data,null,$tw.config.preferences.jsonSpaces);

@@ -4,8 +4,8 @@ tags: $:/tags/Exporter AsPlugin
 title: $:/plugins/chris2fr/asplugin/export
 type: text/vnd.tiddlywiki
 
-\define renderContent( extratag:"""FromAsPlugin""" )
-<$text text=<<plugintiddlers filter:"""$(exportFilter)$""" extratag:"""$extratag$""">>/>
+\define renderContent( authorlogin:"""yourname""" WikiShortCamelName:"""YourWiki""" )
+<$text text=<<plugintiddlers filter:"""$(exportFilter)$""" authorlogin:"""$authorlogin$""" WikiShortCamelName:"""$WikiShortCamelName$""">>/>
 \end
 author:{{$:/plugins/chris2fr/asplugin/config##author}}
 description: {{$:/plugins/chris2fr/asplugin/config##description}}
@@ -17,6 +17,8 @@ version:{{$:/plugins/chris2fr/asplugin/config##version}}
 """
 
 """
-<$set name="extrataginput" value={{$:/plugins/chris2fr/asplugin/config##extratag}}>
-<<renderContent extratag:"""$(extrataginput)$""">>
+<$set name="authorlogin" value={{$:/plugins/chris2fr/asplugin/config##authorlogin}}>
+<$set name="WikiShortCamelName" value={{$:/plugins/chris2fr/asplugin/config##WikiShortCamelName}}>
+<<renderContent authorlogin:"""$(authorlogin)$"""  WikiShortCamelName:"""$(WikiShortCamelName)$""">>
+</$set>
 </$set>
