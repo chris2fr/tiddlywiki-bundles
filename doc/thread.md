@@ -146,3 +146,58 @@ Pragmatically speaking: possibly a streamlined Tinka that...
 Best wishes,
 
 — tb
+
+---
+
+from: Jeremy R  
+
+On: 2015-11-09
+
+Hi Christopher
+
+Good stuff.
+
+You may have seen it already, but there is a core function you can call in the browser to create a plugin:
+
+http://tiddlywiki.com/dev/#How%20to%20create%20plugins%20in%20the%20browser
+
+https://github.com/Jermolene/TiddlyWiki5/blob/master/core/modules/utils/pluginmaker.js
+
+The reason that the core doesn’t have an “export as plugin” option is because there’s currently no mechanism for the user to specify the other parameters needed to create the plugin: the title of the plugin tiddler, and the version number. What are you currently using as the fields of the plugin tiddler? The upgrade mechanism relies on the version number being bumped on each revision.
+
+In terms of dynamically updating installed plugins, there is of course already a mechanism to do that via the plugin library. The internals are a bit counter-intuitive because of the same origin limitations that browser’s impose; it’s not an option to just xmlhttprequest() to retrieve the new text of a plugin.
+
+The plugin library is represented as an HTML file that TW loads in an iframe, and then communicates with using window.postMessage(). The HTML file is allowed to use xmlhttprequest() to retrieve plugins from the same domain from which it was loaded.
+
+The easiest way to explore might be to first look at the plugin library HTML file:
+
+http://tiddlywiki.com/library/v5.1.9/index.html
+
+You can see the raw files here:
+
+https://github.com/Jermolene/jermolene.github.io/blob/master/library/v5.1.9/index.html
+
+The plugin library is built from this special edition:
+
+https://github.com/Jermolene/TiddlyWiki5/blob/master/editions/pluginlibrary
+
+Most of the logic is in this plugin:
+
+https://github.com/Jermolene/TiddlyWiki5/tree/master/plugins/tiddlywiki/pluginlibrary
+
+The TW code that interacts with the plugin library is here:
+
+https://github.com/Jermolene/TiddlyWiki5/blob/master/core/modules/startup/browser-messaging.js
+
+PlugOut would be a repository, even on a local filesystem, that would act as a library for Plugins.
+
+The obstacle here is that Chrome doesn’t let files loaded on a file:// URI perform any xmlhttprequest() to other file:// URIs.
+
+My warning would be that the entire approach to implementing the plugin library was shaped by the browser security restrictions. I’d recommend careful testing before you rely on a browser capability actually working in the right scenarios.
+
+Good luck,
+
+Best wishes
+
+Jeremy.
+
