@@ -8,7 +8,7 @@ revision: 0
 source: https://github.com/chris2fr/tiddlywiki-as-plugin
 title: $:/plugins/chris2fr/asplugin
 type: application/json
-version: 0.0.5-beta201511081436
+version: 0.0.6-beta201511081439
 
 {
     "tiddlers": {
@@ -27,13 +27,11 @@ version: 0.0.5-beta201511081436
             "text": "\\define renderContent( extratag:\"\"\"FromAsPlugin\"\"\" )\n<$text text=<<plugintiddlers filter:\"\"\"$(exportFilter)$\"\"\" extratag:\"\"\"$extratag$\"\"\">>/>\n\\end\nauthor:{{$:/plugins/chris2fr/asplugin/config##author}}\ndescription: {{$:/plugins/chris2fr/asplugin/config##description}}\nlist:{{$:/plugins/chris2fr/asplugin/config##list}}\nplugin-type: plugin\ntitle:{{$:/plugins/chris2fr/asplugin/config##title}}\ntype:application/json\nversion:{{$:/plugins/chris2fr/asplugin/config##version}}\n\"\"\"\n\n\"\"\"\n<$set name=\"extrataginput\" value={{$:/plugins/chris2fr/asplugin/config##extratag}}>\n<<renderContent extratag:\"\"\"$(extrataginput)$\"\"\">>\n</$set>\n"
         },
         "$:/plugins/chris2fr/asplugin/plugintiddlers": {
-            "created": "20151106222453723",
-            "modified": "20151108120220193",
             "module-type": "macro",
             "tags": "AsPlugin",
             "title": "$:/plugins/chris2fr/asplugin/plugintiddlers",
             "type": "application/javascript",
-            "text": "/*\\\ntitle: plugintiddlers\ntype: application/javascript\nmodule-type: macro\n\nMacro to output tiddlers matching a filter to Plugin\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\"use strict\";\n\n/*\nInformation about this macro\n*/\n\nexports.name = \"plugintiddlers\";\n\nexports.params = [\n\t{name: \"filter\"},\n\t{name: \"extratag\",\n\tdefault: \"FromTiddlyWikiAsAPlugin\"}\n];\n\n/*\nRun the macro\n*/\nexports.run = function(filter, extratag) {\n\tvar data = {tiddlers: {}};\n\tvar tiddlers = this.wiki.filterTiddlers(filter);\n\tfor(var t=0;t<tiddlers.length; t++) {\n\t\tvar tiddler = this.wiki.getTiddler(tiddlers[t]);\n\t\tif(tiddler) {\n\t\t\tvar fields = new Object();\n\t\t\tfor(var field in tiddler.fields) {\n\t\t\t\tfields[field] = tiddler.getFieldString(field);\n\t\t\t}\n\t\t\tdata[\"tiddlers\"][fields[\"title\"]] = fields;\n\t\t\tif (!(\"tags\" in data[\"tiddlers\"][fields[\"title\"]])) {\n\t\t\t   data[\"tiddlers\"][fields[\"title\"]][\"tags\"] = \"\";\n\t\t\t}\n\t\t\tif( !(data[\"tiddlers\"][fields[\"title\"]][\"tags\"].indexOf(extratag) >= 0)) {\n\t\t\t\tdata[\"tiddlers\"][fields[\"title\"]][\"tags\"] += \" \" + extratag;\n\t\t\t}\n                        data[\"tiddlers\"][fields[\"title\"]][\"tags\"] = data[\"tiddlers\"][fields[\"title\"]][\"tags\"].trim();\n\t\t}\n\t}\n\treturn JSON.stringify(data,null,$tw.config.preferences.jsonSpaces);\n};\n\n})();\n"
+            "text": "/*\\\ntitle: plugintiddlers\ntype: application/javascript\nmodule-type: macro\n\nMacro to output tiddlers matching a filter to Plugin\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\"use strict\";\n\n/*\nInformation about this macro\n*/\n\nexports.name = \"plugintiddlers\";\n\nexports.params = [\n\t{name: \"filter\"},\n\t{name: \"extratag\",\n\tdefault: \"FromTiddlyWikiAsAPlugin\"}\n];\n\n/*\nRun the macro\n*/\nexports.run = function(filter, extratag) {\n\tvar data = {tiddlers: {}};\n\tvar tiddlers = this.wiki.filterTiddlers(filter);\n\tfor(var t=0;t<tiddlers.length; t++) {\n\t\tvar tiddler = this.wiki.getTiddler(tiddlers[t]);\n\t\tif(tiddler) {\n\t\t\tvar fields = new Object();\n\t\t\tfor(var field in tiddler.fields) {\n\t\t\t\tfields[field] = tiddler.getFieldString(field);\n\t\t\t}\n\t\t\tdata[\"tiddlers\"][fields[\"title\"]] = fields;\n\t\t\t// Adding of a specific field (perhaps more elegant)\n\t\t\t// A little belt and suspenders with the tag appending\n\t\t\tfields[\"asplugin\"] = extratag;\n\t\t\t// Adding of \"ExtraTag\"\n\t\t\tif (!(\"tags\" in data[\"tiddlers\"][fields[\"title\"]])) {\n\t\t\t   data[\"tiddlers\"][fields[\"title\"]][\"tags\"] = \"\";\n\t\t\t}\n\t\t\tif( !(data[\"tiddlers\"][fields[\"title\"]][\"tags\"].indexOf(extratag) >= 0)) {\n\t\t\t\tdata[\"tiddlers\"][fields[\"title\"]][\"tags\"] += \" \" + extratag;\n\t\t\t}\n      \t\tdata[\"tiddlers\"][fields[\"title\"]][\"tags\"] = data[\"tiddlers\"][fields[\"title\"]][\"tags\"].trim();\t\n\t\t}\n\t}\n\treturn JSON.stringify(data,null,$tw.config.preferences.jsonSpaces);\n};\n\n})();\n"
         },
         "$:/plugins/chris2fr/asplugin/readme": {
             "created": "20151107081239777",
@@ -47,7 +45,7 @@ version: 0.0.5-beta201511081436
             "tags": "AsPlugin",
             "title": "$:/plugins/chris2fr/asplugin/usage",
             "type": "text/vnd.tiddlywiki",
-            "text": "!AsPlugin Usage\n\n# ''Before all else'' please configure the name of the export wiki here: [[$:/plugins/chris2fr/asplugin/config]].\n# Export the tiddlers you are interested in via an export dialogue (arrow facing up in an open box).\n#* Either all the tiddlers of this ~TiddlyWiki with the \"Export All\" option in the sidebar\n#* Or results of an $:/AdvancedSearch if you want a subset\n# Save that file somewhere, such as \"Downloads\"\n# Import that \"tiddlers.tid\" file to a target wiki (not the wiki you exported from)\n\nThat's it.\n\nIt would be nice to just drag and drop the package elsewhere, but I haven't quite figured that out yet.\n"
+            "text": "!AsPlugin Usage\n\n# ''Before all else'' please configure the name of the export wiki here: [[$:/plugins/chris2fr/asplugin/config]].\n# Export the tiddlers you are interested in via an export dialogue {{$:/core/images/export-button}} (arrow facing up in an open box).\n#* Either all the tiddlers of this ~TiddlyWiki with the \"Export All\" option in the sidebar\n#* Or results of an $:/AdvancedSearch if you want a subset\n# Save that file somewhere, such as \"Downloads\"\n# Import that \"tiddlers.tid\" file to a target wiki (not the wiki you exported from)\n\nThat's it.\n\nIt would be nice to just drag and drop the package elsewhere, but I haven't quite figured that out yet.\n"
         }
     }
 }

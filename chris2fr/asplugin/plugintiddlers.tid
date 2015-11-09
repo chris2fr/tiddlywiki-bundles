@@ -1,5 +1,3 @@
-created: 20151106222453723
-modified: 20151108120220193
 module-type: macro
 tags: AsPlugin
 title: $:/plugins/chris2fr/asplugin/plugintiddlers
@@ -45,13 +43,17 @@ exports.run = function(filter, extratag) {
 				fields[field] = tiddler.getFieldString(field);
 			}
 			data["tiddlers"][fields["title"]] = fields;
+			// Adding of a specific field (perhaps more elegant)
+			// A little belt and suspenders with the tag appending
+			fields["asplugin"] = extratag;
+			// Adding of "ExtraTag"
 			if (!("tags" in data["tiddlers"][fields["title"]])) {
 			   data["tiddlers"][fields["title"]]["tags"] = "";
 			}
 			if( !(data["tiddlers"][fields["title"]]["tags"].indexOf(extratag) >= 0)) {
 				data["tiddlers"][fields["title"]]["tags"] += " " + extratag;
 			}
-                        data["tiddlers"][fields["title"]]["tags"] = data["tiddlers"][fields["title"]]["tags"].trim();
+      		data["tiddlers"][fields["title"]]["tags"] = data["tiddlers"][fields["title"]]["tags"].trim();	
 		}
 	}
 	return JSON.stringify(data,null,$tw.config.preferences.jsonSpaces);
