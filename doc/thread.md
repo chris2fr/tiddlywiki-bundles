@@ -201,3 +201,15 @@ Best wishes
 
 Jeremy.
 
+---
+
+Part of my answer 2015-11-09
+
+I am being really lazy here perhaps, but how do I construct recipes/library/tiddlers.json and "recipes/library/tiddlers/" + encodeURIComponent(title) + ".json »?
+
+Improvement ideas:
+
+* Get the last part of ‘title’ from the URL (hence not needing any configuration)
+* Have a front-end for the configuration instead of that data tiddler (and perhaps put the data tiddler directly in the Control Panel while we wait)
+* Have a « push-to-library » function (will need a server)
+* Use the internal plugin-maker, if I can
