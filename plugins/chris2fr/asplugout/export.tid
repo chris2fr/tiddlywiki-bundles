@@ -7,7 +7,6 @@ type: text/vnd.tiddlywiki
 \define renderContent( authorShortName:"""MeMyselfAndI""" wikiShortName:"""MyWiki""" )
 <$text text=<<tiddlersForPlugoutFormat filter:"""$(exportFilter)$""" authorShortName:"""$authorShortName$""" wikiShortName:"""$wikiShortName$""">>/>
 \end
-{{$:/plugins/chris2fr/asplugout/config/sanitize}}
 author: {{$:/config/chris2fr/asplugout/AuthorNaturalName}}
 description: {{$:/config/chris2fr/asplugout/WikiNaturalName}}
 list: deltas
