@@ -1,24 +1,24 @@
 description: ~TwiddlyWiki as Plugout (.tid)
 extension: .tid
-tags: $:/tags/Exporter HowWowNow/AsPlugout
-title: $:/plugins/howwownow/asplugout/export
+tags: $:/tags/Exporter Chris2Fr/AsPlugout
+title: $:/plugins/chris2fr/asplugout/export
 type: text/vnd.tiddlywiki
 
 \define renderContent( authorShortName:"""MeMyselfAndI""" wikiShortName:"""MyWiki""" )
 <$text text=<<tiddlersForPlugoutFormat filter:"""$(exportFilter)$""" authorShortName:"""$authorShortName$""" wikiShortName:"""$wikiShortName$""">>/>
 \end
-author: {{$:/config/howwownow/asplugout/AuthorNaturalName}}
-description: {{$:/config/howwownow/asplugout/WikiNaturalName}}
+author: {{$:/config/chris2fr/asplugout/AuthorNaturalName}}
+description: {{$:/config/chris2fr/asplugout/WikiNaturalName}}
 list: deltas
 plugin-type: plugin
-title: {{$:/config/howwownow/asplugout/Title}}
+title: {{$:/config/chris2fr/asplugout/Title}}
 type: application/json
-version: {{$:/config/howwownow/asplugout/Version}}
+version: {{$:/config/chris2fr/asplugout/Version}}
 """
 
 """
-<$set name="authorShortName" value={{$:/config/howwownow/asplugout/AuthorShortName}}>
-<$set name="wikiShortName" value={{$:/config/howwownow/asplugout/WikiShortName}}>
+<$set name="authorShortName" value={{$:/config/chris2fr/asplugout/AuthorShortName}}>
+<$set name="wikiShortName" value={{$:/config/chris2fr/asplugout/WikiShortName}}>
 <<renderContent authorShortName:"""$(authorShortName)$"""  wikiShortName:"""$(wikiShortName)$""">>
 </$set>
 </$set>

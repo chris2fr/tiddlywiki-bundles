@@ -1,11 +1,11 @@
-tags: HowWowNow/AsPlugout
-title: $:/config/howwownow/asplugout/
+tags: Chris2Fr/AsPlugout
+title: $:/config/chris2fr/asplugout/
 type: text/vnd.tiddlywiki
 
 WikiShortName: MyWiki
 AuthorShortName: Plugouts
 WikiNaturalName: My Wiki
 AuthorNaturalName: Me, Myself and I <memyselfandi@example.com>
-Title: $:/plugouts/{{$:/config/howwownow/asplugout/AuthorShortName}}/{{$:/config/howwownow/asplugout/WikiShortName}}
+Title: $:/plugouts/{{$:/config/chris2fr/asplugout/AuthorShortName}}/{{$:/config/chris2fr/asplugout/WikiShortName}}
 Version: 0.0.<<now YYYY0MM0DD0hh0mm0ss>>
 List: deltas

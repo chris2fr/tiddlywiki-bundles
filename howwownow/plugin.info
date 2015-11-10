@@ -1,5 +1,5 @@
 {
-	"title": "$:/plugins/howwownow/asplugout",
+	"title": "$:/plugins/chris2fr/asplugout",
 	"description": "AsPlugout - Export Tiddlers as Shadows in a Plugout (like a Plugin)",
 	"author": "Christopher Mann <christopher@mann.fr>",
 	"core-version": ">=5.0.0",

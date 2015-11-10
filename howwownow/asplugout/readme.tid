@@ -1,14 +1,14 @@
 created: 20151107081239777
 modified: 20151108120742009
-tags: HowWowNow/AsPlugout
-title: $:/plugins/howwownow/asplugout/readme
+tags: Chris2Fr/AsPlugout
+title: $:/plugins/chris2fr/asplugout/readme
 type: text/vnd.tiddlywiki
 
 <h1>AsPlugout</h1>
 
 <b>Important:</b> as of version 0.0.8, there is a name change. If you have installed v.0.0.7 or previously, you need to manually delete [[$:/plugins/christopher/asplugin]].
 
-Currently, AsPlugout furnishes an export filter for this wiki as a "plugout." A plugout is really just a plugin, but in a plugouts folder instead of a plugins folder, and with mainly content shadow tiddlers instead of functional tiddlers. You just drag the exported file to other ~TiddlyWiki files, and you have a convenient method of accessing "plugged-out" content. Recovering changes is pretty easy too with the .json format. Start with the [[config dialog|$:/plugins/howwownow/asplugout/config]] when you are ready.
+Currently, AsPlugout furnishes an export filter for this wiki as a "plugout." A plugout is really just a plugin, but in a plugouts folder instead of a plugins folder, and with mainly content shadow tiddlers instead of functional tiddlers. You just drag the exported file to other ~TiddlyWiki files, and you have a convenient method of accessing "plugged-out" content. Recovering changes is pretty easy too with the .json format. Start with the [[config dialog|$:/plugins/chris2fr/asplugout/config]] when you are ready.
 
 <h2>Longer Discussion</h2>
 

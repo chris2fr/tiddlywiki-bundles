@@ -2,7 +2,7 @@
 title: tiddlersForPlugoutFormat
 type: application/javascript
 module-type: macro
-tags: HowWowNow/AsPlugout
+tags: Chris2Fr/AsPlugout
 
 Macro to output tiddlers matching a filter to Plugin
 
@@ -35,7 +35,7 @@ exports.run = function(filter, wikiShortName, authorShortName) {
 	var data = {tiddlers: {}};
 	var tiddlers = this.wiki.filterTiddlers(filter);
 	// Used as a flag and a plugout field value
-	var wikiAuthorTitle = wikiShortName.replace("[^a-zA-Z0-9]","") + "/" + wikiShortName.replace("[^a-zA-Z0-9]","");
+	var wikiAuthorTitle = authorShortName.replace("[^a-zA-Z0-9]","") + "/" + wikiShortName.replace("[^a-zA-Z0-9]","");
 	// Where the Wiki will be
 	var wikiFullPath = "$:/plugouts/" + wikiAuthorTitle
 	for(var t=0;t<tiddlers.length; t++) {

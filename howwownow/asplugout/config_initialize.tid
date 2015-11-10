@@ -1,8 +1,8 @@
-tags: HowWowNow/AsPlugout
-title: $:/plugins/howwownow/asplugout/config/initialize
+tags: Chris2Fr/AsPlugout
+title: $:/plugins/chris2fr/asplugout/config/initialize
 type: text/vnd.tiddlywiki
 
-<$action-setfield $tiddler="$:/config/howwownow/asplugout/WikiShortName" $value={{$:/SiteTitle}}/>
-<$action-setfield $tiddler="$:/config/howwownow/asplugout/AuthorShortName" $value="MeMyselfAndI"/>
-<$action-setfield $tiddler="$:/config/howwownow/asplugout/WikiNaturalName" $value={{$:/SiteSubtitle}}/>
-<$action-setfield $tiddler="$:/config/howwownow/asplugout/AuthorNaturalName" $value={{$:/status/UserName}}/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/WikiShortName" $value={{$:/SiteTitle}}/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/AuthorShortName" $value="MeMyselfAndI"/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/WikiNaturalName" $value={{$:/SiteSubtitle}}/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/AuthorNaturalName" $value={{$:/status/UserName}}/>

@@ -1,5 +1,5 @@
-tags: HowWowNow/AsPlugout
-title: $:/plugins/howwownow/asplugout/config
+tags: Chris2Fr/AsPlugout
+title: $:/plugins/chris2fr/asplugout/config
 type: text/vnd.tiddlywiki
 
 \define renderCheckShortName(targetTiddler shortName)
@@ -13,20 +13,20 @@ type: text/vnd.tiddlywiki
 
 <$button>
 Initiate Configuration Settings
-{{$:/plugins/howwownow/asplugout/config/initialize}}
+{{$:/plugins/chris2fr/asplugout/config/initialize}}
 </$button>
 
-| [[WikiShortName|$:/config/howwownow/asplugout/WikiShortName]]| [[|$:/config/howwownow/asplugout/]]||<$edit-text tiddler="$:/config/howwownow/asplugout/WikiShortName" tag="input" type="text"/><br/>No spaces or special characters|
-| [[AuthorShortName|\$:/config/howwownow/asplugout/AuthorShortName]]| [[|\$:/config/howwownow/asplugout/]]||<$edit-text tiddler="$:/config/howwownow/asplugout/AuthorShortName" tag="input" type="text"/><br/>No spaces or special characters|
-| [[Title|$:/config/howwownow/asplugout/Title]]| [[|$:/config/howwownow/asplugout/]]||{{$:/config/howwownow/asplugout/Title}}|
-| [[WikiNaturalName|$:/config/howwownow/asplugout/WikiNaturalName]]| [[|$:/config/howwownow/asplugout/]]||<$edit-text tiddler="$:/config/howwownow/asplugout/WikiNaturalName" tag="input" type="text" default={{$:/SiteSubtitle}}/><br/>One-line description (will be plugin name)|
-| [[AuthorNaturalName|$:/config/howwownow/asplugout/AuthorNaturalName]]| [[|$:/config/howwownow/asplugout/]]||<$edit-text tiddler="$:/config/howwownow/asplugout/AuthorNaturalName" tag="input" type="text"/><br/>Email convention is good "John Smith &lt;john.smith@example.com&gt;"|
-| [[List|$:/config/howwownow/asplugout/List]]| [[|$:/config/howwownow/asplugout/]]||{{$:/config/howwownow/asplugout/List}}|
-| [[Version|$:/config/howwownow/asplugout/Version]]| [[|$:/config/howwownow/asplugout/]]||{{$:/config/howwownow/asplugout/Version}}|
+| [[WikiShortName|$:/config/chris2fr/asplugout/WikiShortName]]| [[|$:/config/chris2fr/asplugout/]]||<$edit-text tiddler="$:/config/chris2fr/asplugout/WikiShortName" tag="input" type="text"/><br/>No spaces or special characters|
+| [[AuthorShortName|\$:/config/chris2fr/asplugout/AuthorShortName]]| [[|\$:/config/chris2fr/asplugout/]]||<$edit-text tiddler="$:/config/chris2fr/asplugout/AuthorShortName" tag="input" type="text"/><br/>No spaces or special characters|
+| [[Title|$:/config/chris2fr/asplugout/Title]]| [[|$:/config/chris2fr/asplugout/]]||{{$:/config/chris2fr/asplugout/Title}}|
+| [[WikiNaturalName|$:/config/chris2fr/asplugout/WikiNaturalName]]| [[|$:/config/chris2fr/asplugout/]]||<$edit-text tiddler="$:/config/chris2fr/asplugout/WikiNaturalName" tag="input" type="text" default={{$:/SiteSubtitle}}/><br/>One-line description (will be plugin name)|
+| [[AuthorNaturalName|$:/config/chris2fr/asplugout/AuthorNaturalName]]| [[|$:/config/chris2fr/asplugout/]]||<$edit-text tiddler="$:/config/chris2fr/asplugout/AuthorNaturalName" tag="input" type="text"/><br/>Email convention is good "John Smith &lt;john.smith@example.com&gt;"|
+| [[List|$:/config/chris2fr/asplugout/List]]| [[|$:/config/chris2fr/asplugout/]]||{{$:/config/chris2fr/asplugout/List}}|
+| [[Version|$:/config/chris2fr/asplugout/Version]]| [[|$:/config/chris2fr/asplugout/]]||{{$:/config/chris2fr/asplugout/Version}}|
 
-{{$:/plugins/howwownow/asplugout/config/sanitize}}
+{{$:/plugins/chris2fr/asplugout/config/sanitize}}
 
 <$button>
 Sanitize Configuration Settings
-{{$:/plugins/howwownow/asplugout/config/sanitize}}
+{{$:/plugins/chris2fr/asplugout/config/sanitize}}
 </$button>
