@@ -1,6 +1,8 @@
-tags: Chris2Fr/AsPlugout
+tags: Chris2Fr/AsPlugout $:/tags/SideBar
 title: $:/plugins/chris2fr/asplugout/config
 type: text/vnd.tiddlywiki
+list-after: $:/core/ui/SideBar/Recent
+caption: Plugout
 
 \define renderCheckShortName(targetTiddler shortName)
 <$action-setfield $tiddler="""$targetTiddler$""" $value=<<checkShortName shortName:"""$shortName$""" >>/>
@@ -12,17 +14,18 @@ type: text/vnd.tiddlywiki
 !Configure Your Plugout
 
 <$button>
-Initiate Configuration Settings
+Reset / Initialize Configuration Settings from Current Wiki
 {{$:/plugins/chris2fr/asplugout/config/initialize}}
+{{$:/plugins/chris2fr/asplugout/config/sanitize}}
 </$button>
 
-| [[WikiShortName|$:/config/chris2fr/asplugout/WikiShortName]]| [[|$:/config/chris2fr/asplugout/]]||<$edit-text tiddler="$:/config/chris2fr/asplugout/WikiShortName" tag="input" type="text" size="40"/><br/>No spaces or special characters|
-| [[AuthorShortName|\$:/config/chris2fr/asplugout/AuthorShortName]]| [[|\$:/config/chris2fr/asplugout/]]||<$edit-text tiddler="$:/config/chris2fr/asplugout/AuthorShortName" tag="input" type="text" size="40"/><br/>No spaces or special characters|
-| [[Title|$:/config/chris2fr/asplugout/Title]]| [[|$:/config/chris2fr/asplugout/]]||{{$:/config/chris2fr/asplugout/Title}}|
-| [[WikiNaturalName|$:/config/chris2fr/asplugout/WikiNaturalName]]| [[|$:/config/chris2fr/asplugout/]]||<$edit-text tiddler="$:/config/chris2fr/asplugout/WikiNaturalName" tag="input" type="text" default={{$:/SiteSubtitle}} size="80"/><br/>One-line description (will be plugin name)|
-| [[AuthorNaturalName|$:/config/chris2fr/asplugout/AuthorNaturalName]]| [[|$:/config/chris2fr/asplugout/]]||<$edit-text tiddler="$:/config/chris2fr/asplugout/AuthorNaturalName" tag="input" type="text" size="80"/><br/>Email convention is good "John Smith &lt;john.smith@example.com&gt;"|
-| [[List|$:/config/chris2fr/asplugout/List]]| [[|$:/config/chris2fr/asplugout/]]||{{$:/config/chris2fr/asplugout/List}}|
-| [[Version|$:/config/chris2fr/asplugout/Version]]| [[|$:/config/chris2fr/asplugout/]]||{{$:/config/chris2fr/asplugout/Version}}|
+| [[WikiShortName|$:/config/chris2fr/asplugout/WikiShortName]]|<$edit-text tiddler="$:/config/chris2fr/asplugout/WikiShortName" tag="input" type="text" size="25"/><br/>No spaces or special characters|
+| [[AuthorShortName|\$:/config/chris2fr/asplugout/AuthorShortName]]|<$edit-text tiddler="$:/config/chris2fr/asplugout/AuthorShortName" tag="input" type="text" size="25"/><br/>No spaces or special characters|
+| [[Title|$:/config/chris2fr/asplugout/Title]]|{{$:/config/chris2fr/asplugout/Title}}|
+| [[WikiNaturalName|$:/config/chris2fr/asplugout/WikiNaturalName]]|<$edit-text tiddler="$:/config/chris2fr/asplugout/WikiNaturalName" tag="input" type="text" default={{$:/SiteSubtitle}} size="50"/><br/>One-line description (will be plugin name)|
+| [[AuthorNaturalName|$:/config/chris2fr/asplugout/AuthorNaturalName]]|<$edit-text tiddler="$:/config/chris2fr/asplugout/AuthorNaturalName" tag="input" type="text" size="50"/><br/>Email convention is good "John Smith &lt;john.smith@example.com&gt;"|
+| [[List|$:/config/chris2fr/asplugout/List]]|{{$:/config/chris2fr/asplugout/List}}|
+| [[Version|$:/config/chris2fr/asplugout/Version]]|{{$:/config/chris2fr/asplugout/Version}}|
 
 {{$:/plugins/chris2fr/asplugout/config/sanitize}}
 

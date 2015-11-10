@@ -61,7 +61,7 @@ exports.run = function(filter, wikiShortName, authorShortName) {
 			data["tiddlers"][wikiFullPath + "/deltas"] = {
 				"title":wikiFullPath + "/deltas",
 				"tags":wikiAuthorTitle,
-				"text":"!Deltas on local wiki\n\n[plugout[" + wikiAuthorTitle + "]]\n\n{{{[plugout[" + wikiAuthorTitle + "]]}}}"
+				"text":"!Deltas on local wiki\n\nUse  $:/AdvancedSearch with this filter `[plugout[" + wikiAuthorTitle + "]]`\n\n{{{[plugout[" + wikiAuthorTitle + "]]}}}"
 			};
 		}
 	}

@@ -20,7 +20,8 @@ Information about this macro
 exports.name = "checkNaturalName";
 
 exports.params = [
-	{name: "naturalName"}
+	{name: "naturalName",
+	default: "No Name"}
 ];
 
 /*

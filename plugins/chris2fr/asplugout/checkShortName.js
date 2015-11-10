@@ -28,7 +28,8 @@ Information about this macro
 exports.name = "checkShortName";
 
 exports.params = [
-	{name: "shortName"}
+	{name: "shortName",
+   default: "NoName"}
 ];
 
 /*
