@@ -213,3 +213,119 @@ Improvement ideas:
 * Have a front-end for the configuration instead of that data tiddler (and perhaps put the data tiddler directly in the Control Panel while we wait)
 * Have a « push-to-library » function (will need a server)
 * Use the internal plugin-maker, if I can
+
+---
+
+Hi Tobias
+
+> Interestingly, except Erwan who does rely on that for indexing plugins, I don't think I've read any demands so far that asked for this or that this or that macro be wrapped up and shipped as a plugin.
+
+It’s pretty simple: it’s only worth using a plugin over a JSON bundle if you want (a) your tiddlers to appear as shadow tiddlers and (b) to be able to handle subsequent updates to the plugin. I think that the demand for plugins that can automatically upgrade is pretty strong.
+
+> In the long term, I can see that the mechanism does perhaps provide better means to provide for any (semi-automated) upgrade procedure via some future tb5 plugin library against which to check for updates.
+
+It’s not really “future”; the plugin library and plugin upgrade procedure is already built into the core.
+
+> Back to simple "bundles" and the context of "let's (allow to) create the simplest plugin possible": One should be able to not specify a version, maybe even plugin-type, and all that jazz and still have a "bundle of tiddlers" created / imported.
+
+But you already can! If you don’t want to have “all that jazz” then you can publish your tiddlers as a JSON bundle. But if you do want to have the ability to automatically upgrade then you need to use a plugin.
+
+It really seems as though you are saying “plugins are too complicated, there needs to be a simpler alternative”, and yet there already is a simpler alternative available, in the shape of JSON bundles.
+
+> Following your instructions here, I can see that the following won't do to create the simplest of "bundles”:
+
+I’m not sure what you’re saying here. Are you saying that the following steps don’t work? Or that they are not simple enough?
+
+```
+title: bundle
+type: application/json
+
+{"tiddlers": {}}
+```
+
+> with
+
+```
+title: foo
+tags bar
+
+baz
+```
+
+> and then in the console:
+
+> ``$tw.utils.repackPlugin("bundle",["foo"]);``
+
+> There are a number of issues with this:
+> 
+> 1. if I have to declare a plugin-type, I'd rather want to use a plugin-type that indicates we're packaging a simple bundle, not a plugin
+>   * in fact, any unrecognized plugin-type should possibly be interpreted as that
+
+Please don’t try to to unilaterally change the vocabulary that we have already established. These things are called “plugins” and not “bundles”. Changing the name is a big deal that will affect a lot of the code, and shouldn’t just be done unilaterally in a mailing list post; it’s incredibly confusing.
+
+I think you’re saying that you’d like the “plugin-type” field to default to “plugin”. I think you’re just not seeing that there are a different types of plugin, and we need to distinguish them because they have different semantics; for example, only one language or theme can be switched in at once.
+
+> 2. I do not want to fiddle with any versioning at the very beginning
+
+You don’t have to fiddle with the version at the beginning, but you won’t be able to use the upgrade mechanism effectively until you do.
+
+> as it proves problematic for importing (the same version)
+
+I don’t think that there is a problem; an incoming plugin with the same version is treated as newer, and is imported.
+
+> so I need to repack my plugin
+
+> but then the constituent tiddlers are gone
+
+> so I need to find a way to start from a wiki with 
+
+> "unpacked" plugin components
+
+> too many things to consider
+
+Again, it seems like you are confusing the current implementation of packing plugins in the browser (which was done in 30 minutes in response to a mailing list request) with the way that plugins are implemented.
+
+> 3. repackPlugin should either
+>  * a) never delete constituent tiddlers
+>    * which means that you won't be able or even intend to use the "bundle" in the wiki you created it (in the browser)
+>    * since we still have the constituent tiddlers as real tiddlers, which is fine anyways
+in that sense, a user could be provided a button that creates a bundle on the fly whenever they want to grab it
+>     * from whichever constituents they desire
+>  * b) repack tiddlers that are already part of the bundle as shadows if they don't exist as real tiddlers
+as, obviously, those initially bundled tiddlers are now gone
+> * but then, how to remove one already packed?
+mhhh, maybe via some option to repackPlugin
+
+I’m sure the procedure can be improved.
+
+>> For what it’s worth, I quite like the word “plugins”, closely followed by “bundle”. “Plugin” at least describes what one does with one of these things: they are designed to be plugged into wikis. The trouble with “bundle” is that we need a word that communicates the differences between a plugin (with it’s upgrade logic) and a bundle (without that logic). So right now I’d use “bundle” to describe a JSON file containing a bunch of tiddlers.
+
+> Exactly, a bundle would be a json file containing a bunch of tiddlers unpacked as shadows. 
+
+But then you are talking about a plugin, not a bundle. If you want the shadow plugin then you need a plugin; that is what they are for. The whole point of them is to give us shadow tiddlers. So trying to find some other way of implementing shadow tiddlers just seems a bit strange.
+
+> There would possibly be a basic upgrade logic for "bundles" as well, namely: skip any version checks entirely. This could be achieved by setting an option flag for repackPlugin to not set any version, as we're not interested (yet) in doing so.
+
+Again, it seems like you are trying to give JSON bundles the characteristics of plugins. It’s hard to see how we can do that without making them plugins.
+
+If you import a JSON bundle with newer versions of the constituent tiddlers, then your existing ones will be overwritten. Isn’t that precisely the behaviour you’re asking for?
+
+> Alternatively, a good alternative could be a YYYY-0MM-0DD-0hh-0mm-0ss version rather than the versioning scheme the name of which escapes me atm. But then, again, a set version comes with the troubles of not being able to import the same or lower version. And with a bundle I possibly don't want any of that. I just want to use that bundle as I just grabbed it.
+
+If you look at semver.org you’ll see that your proposal doesn’t in fact conflict; semver allows for version numbers like 1.0.201511050347
+
+
+>> The community is doing a good job exploring UIs for making plugins, and I’m confident that we will evolve better approaches.
+
+> Surely, I'm very interested in this and I'm sure that trying to (allow users to) start from the most basic "bundle" users may indeed eventually find themselves wanting to leverage more features / aspects of full-blown-plugins, e.g. versioning. But I'd be all fine to have this a gradual process, rather than one requiring literacy of all the intricacies of versioning, plugin-types, dependences, etc…
+
+I’m not sure what you mean by a “gradual” process? We’ve got JSON bundles, and we’ve got plugins; how could the transition be any more gradual?
+
+Best wishes
+
+Jeremy
+
+
+> Best wishes,
+
+> — tb

@@ -1,15 +1,3 @@
-author: Christopher Mann <christopher@mann.fr>
-core-version: >=5.0.0
-dependents:
-description: AsPlugout - Export Tiddlers as Shadows in a Plugout (like a Plugin)
-list: config usage readme
-plugin-type: plugin
-revision: 0
-source: https://github.com/chris2fr/tiddlywiki-as-plugin
-title: $:/plugins/chris2fr/asplugout
-type: application/json
-version: 0.0.8
-
 {
     "tiddlers": {
         "checkNaturalName": {
@@ -116,7 +104,7 @@ version: 0.0.8
             "tags": "Chris2Fr/AsPlugout"
         },
         "$:/plugins/chris2fr/asplugout/usage": {
-            "tags": "Chris2Fr/Plugout",
+            "tags": "Chris2Fr/AsPlugout",
             "title": "$:/plugins/chris2fr/asplugout/usage",
             "type": "text/vnd.tiddlywiki",
             "text": "!AsPlugout Usage\n\n# ''Before all else'' please configure the name of the export wiki here: [[$:/plugins/chris2fr/asplugout/config]].\n# Export the tiddlers you are interested in via an export dialogue {{$:/core/images/export-button}} (arrow facing up in an open box).\n#* Either all the tiddlers of this ~TiddlyWiki with the \"Export All\" option in the sidebar\n#* Or results of an $:/AdvancedSearch if you want a subset\n# Save that file somewhere, such as \"Downloads\"\n# Import that \"tiddlers.tid\" file to a target wiki (not the wiki you exported from)\n\nThat's it.\n\nIt would be nice to just drag and drop the package elsewhere, but I haven't quite figured that out yet.\n"

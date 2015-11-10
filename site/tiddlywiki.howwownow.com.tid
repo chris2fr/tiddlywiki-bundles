@@ -1,0 +1,47 @@
+author: Me, Myself and I 
+description: My Wiki
+list: deltas
+plugin-type: plugin
+title: $:/plugouts/Plugouts/MyWiki
+type: application/json
+version: 0.0.20151110154746
+
+
+
+{
+    "tiddlers": {
+        "AsPlugout": {
+            "text": "AsPlugout is a ~TiddlyWiki plugin to configure and create plugins consisting mainly of shadow content tiddlers. To install, just drag the following link to your ~TiddlyWiki:\n\n[[$:/plugins/chris2fr/asplugout]]\n\nMore info at the plugin pages [[readme|$:/plugins/chris2fr/asplugout/readme]], [[usage|$:/plugins/chris2fr/asplugout/usage]], and [[config|$:/plugins/chris2fr/asplugout/config]].\n\nThe repository page is here:\n\nhttps://github.com/chris2fr/tiddlywiki-as-plugin\n",
+            "bag": "default",
+            "created": "20151110133553495",
+            "creator": "Christopher Mann <christopher@mann.fr>",
+            "modified": "20151110143914170",
+            "modifier": "Christopher Mann <christopher@mann.fr>",
+            "revision": "3",
+            "tags": "TableOfContents Plugouts/MyWiki",
+            "title": "AsPlugout",
+            "plugout": "Plugouts/MyWiki"
+        },
+        "$:/plugouts/Plugouts/MyWiki/deltas": {
+            "title": "$:/plugouts/Plugouts/MyWiki/deltas",
+            "tags": "Plugouts/MyWiki",
+            "text": "!Deltas on local wiki\n\n[plugout[Plugouts/MyWiki]]\n\n{{{[plugout[Plugouts/MyWiki]]}}}"
+        },
+        "TableOfContents": {
+            "text": "<div class=\"tc-table-of-contents\">\n\n<<toc-selective-expandable 'TableOfContents'>>\n\n</div>\n",
+            "bag": "default",
+            "caption": "{{$:/language/SideBar/Contents/Caption}}",
+            "created": "20140809114010378",
+            "list": "HelloThere Learning [[Working with TiddlyWiki]] [[Customise TiddlyWiki]] Features Languages Editions Plugins Platforms Reference Community About",
+            "list-after": "$:/core/ui/SideBar/Open",
+            "modified": "20151028133758231",
+            "revision": "0",
+            "tags": "$:/tags/SideBar Plugouts/MyWiki",
+            "title": "TableOfContents",
+            "type": "text/vnd.tiddlywiki",
+            "plugout": "Plugouts/MyWiki"
+        }
+    }
+}
+
+
