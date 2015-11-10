@@ -1,17 +1,32 @@
-tags: AsPlugin
-title: $:/plugins/chris2fr/asplugin/config
-type: application/x-tiddler-dictionary
+tags: HowWowNow/AsPlugout
+title: $:/plugins/howwownow/asplugout/config
+type: text/vnd.tiddlywiki
 
+\define renderCheckShortName(targetTiddler shortName)
+<$action-setfield $tiddler="""$targetTiddler$""" $value=<<checkShortName shortName:"""$shortName$""" >>/>
+\end
+\define renderCheckNaturalName(targetTiddler naturalName)
+<$action-setfield $tiddler="""$targetTiddler$""" $value=<<checkNaturalName naturalName:"""$naturalName$""" >>/>
+\end
 
-authorlogin:yourname
-WikiShortCamelName:YourWiki
-description:Your Wiki Description
-# This is a tag or tags we add to better keep track
-version:0.0.<<now YYYY0MM0DD0hh0mm>>
-author:Your Name <youremail@example.com>
-# List is the files in $:/plugins/{{##authorusername}}/{{##pluginname}} for the control panel
-list:deltas
-source:
-# No need to change below line
-# Title must follow convention for plugins, such as $:/plugins/author/plugin_name
-title:$:/plugins/{{##authorlogin}}/{{##WikiShortCamelName}}
+!Configure Your Plugout
+
+<$button>
+Initiate Configuration Settings
+{{$:/plugins/howwownow/asplugout/config/initialize}}
+</$button>
+
+| [[WikiShortName|$:/config/howwownow/asplugout/WikiShortName]]| [[|$:/config/howwownow/asplugout/]]||<$edit-text tiddler="$:/config/howwownow/asplugout/WikiShortName" tag="input" type="text"/><br/>No spaces or special characters|
+| [[AuthorShortName|\$:/config/howwownow/asplugout/AuthorShortName]]| [[|\$:/config/howwownow/asplugout/]]||<$edit-text tiddler="$:/config/howwownow/asplugout/AuthorShortName" tag="input" type="text"/><br/>No spaces or special characters|
+| [[Title|$:/config/howwownow/asplugout/Title]]| [[|$:/config/howwownow/asplugout/]]||{{$:/config/howwownow/asplugout/Title}}|
+| [[WikiNaturalName|$:/config/howwownow/asplugout/WikiNaturalName]]| [[|$:/config/howwownow/asplugout/]]||<$edit-text tiddler="$:/config/howwownow/asplugout/WikiNaturalName" tag="input" type="text" default={{$:/SiteSubtitle}}/><br/>One-line description (will be plugin name)|
+| [[AuthorNaturalName|$:/config/howwownow/asplugout/AuthorNaturalName]]| [[|$:/config/howwownow/asplugout/]]||<$edit-text tiddler="$:/config/howwownow/asplugout/AuthorNaturalName" tag="input" type="text"/><br/>Email convention is good "John Smith &lt;john.smith@example.com&gt;"|
+| [[List|$:/config/howwownow/asplugout/List]]| [[|$:/config/howwownow/asplugout/]]||{{$:/config/howwownow/asplugout/List}}|
+| [[Version|$:/config/howwownow/asplugout/Version]]| [[|$:/config/howwownow/asplugout/]]||{{$:/config/howwownow/asplugout/Version}}|
+
+{{$:/plugins/howwownow/asplugout/config/sanitize}}
+
+<$button>
+Sanitize Configuration Settings
+{{$:/plugins/howwownow/asplugout/config/sanitize}}
+</$button>

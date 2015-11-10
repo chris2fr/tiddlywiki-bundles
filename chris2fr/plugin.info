@@ -1,9 +1,9 @@
 {
-	"title": "$:/plugins/chris2fr/asplugin",
-	"description": "AsPlugin - Export Tiddlers as a Plugin",
+	"title": "$:/plugins/howwownow/asplugout",
+	"description": "AsPlugout - Export Tiddlers as Shadows in a Plugout (like a Plugin)",
 	"author": "Christopher Mann <christopher@mann.fr>",
 	"core-version": ">=5.0.0",
-	"list": "readme usage config",
+	"list": "config usage readme ",
   "source": "https://github.com/chris2fr/tiddlywiki-as-plugin",
 	"version": "0.0.8"
 }

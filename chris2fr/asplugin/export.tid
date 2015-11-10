@@ -1,24 +1,24 @@
-description: ~TwiddlyWiki as Plugin (.tid)
+description: ~TwiddlyWiki as Plugout (.tid)
 extension: .tid
-tags: $:/tags/Exporter AsPlugin
-title: $:/plugins/chris2fr/asplugin/export
+tags: $:/tags/Exporter HowWowNow/AsPlugout
+title: $:/plugins/howwownow/asplugout/export
 type: text/vnd.tiddlywiki
 
-\define renderContent( authorlogin:"""yourname""" WikiShortCamelName:"""YourWiki""" )
-<$text text=<<plugintiddlers filter:"""$(exportFilter)$""" authorlogin:"""$authorlogin$""" WikiShortCamelName:"""$WikiShortCamelName$""">>/>
+\define renderContent( authorShortName:"""MeMyselfAndI""" wikiShortName:"""MyWiki""" )
+<$text text=<<tiddlersForPlugoutFormat filter:"""$(exportFilter)$""" authorShortName:"""$authorShortName$""" wikiShortName:"""$wikiShortName$""">>/>
 \end
-author:{{$:/plugins/chris2fr/asplugin/config##author}}
-description: {{$:/plugins/chris2fr/asplugin/config##description}}
-list:{{$:/plugins/chris2fr/asplugin/config##list}}
+author: {{$:/config/howwownow/asplugout/AuthorNaturalName}}
+description: {{$:/config/howwownow/asplugout/WikiNaturalName}}
+list: deltas
 plugin-type: plugin
-title:{{$:/plugins/chris2fr/asplugin/config##title}}
-type:application/json
-version:{{$:/plugins/chris2fr/asplugin/config##version}}
+title: {{$:/config/howwownow/asplugout/Title}}
+type: application/json
+version: {{$:/config/howwownow/asplugout/Version}}
 """
 
 """
-<$set name="authorlogin" value={{$:/plugins/chris2fr/asplugin/config##authorlogin}}>
-<$set name="WikiShortCamelName" value={{$:/plugins/chris2fr/asplugin/config##WikiShortCamelName}}>
-<<renderContent authorlogin:"""$(authorlogin)$"""  WikiShortCamelName:"""$(WikiShortCamelName)$""">>
+<$set name="authorShortName" value={{$:/config/howwownow/asplugout/AuthorShortName}}>
+<$set name="wikiShortName" value={{$:/config/howwownow/asplugout/WikiShortName}}>
+<<renderContent authorShortName:"""$(authorShortName)$"""  wikiShortName:"""$(wikiShortName)$""">>
 </$set>
 </$set>

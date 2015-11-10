@@ -1,0 +1,16 @@
+tags: HowWowNow/AsPlugout
+title: $:/plugins/howwownow/asplugout/config/sanitize
+type: text/vnd.tiddlywiki
+
+<$set name="shortName" value={{$:/config/howwownow/asplugout/WikiShortName}}>
+<<renderCheckShortName targetTiddler:"$:/config/howwownow/asplugout/WikiShortName" shortName:"""$(shortName)$""">>
+</$set>
+<$set name="shortName" value={{$:/config/howwownow/asplugout/AuthorShortName}}>
+<<renderCheckShortName targetTiddler:"$:/config/howwownow/asplugout/AuthorShortName" shortName:"""$(shortName)$""">>
+</$set>
+<$set name="naturalName" value={{$:/config/howwownow/asplugout/WikiNaturalName}}>
+<<renderCheckNaturalName targetTiddler:"$:/config/howwownow/asplugout/WikiNaturalName" naturalName:"""$(naturalName)$""">>
+</$set>
+<$set name="naturalName" value={{$:/config/howwownow/asplugout/AuthorNaturalName}}>
+<<renderCheckNaturalName targetTiddler:"$:/config/howwownow/asplugout/AuthorNaturalName" naturalName:"""$(naturalName)$""">>
+</$set>

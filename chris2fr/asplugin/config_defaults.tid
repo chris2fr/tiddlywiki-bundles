@@ -1,0 +1,19 @@
+tags: HowWowNow/AsPlugout
+title: $:/plugins/howwownow/asplugout/config/defaults
+type: application/x-tiddler-dictionary
+
+#
+# This should be depreciated.
+#
+WikiShortName:{{$:\SiteTitle}}
+AuthorShortName:MeMyselfAndI
+WikiNaturalName:{{$:\SiteSubtitle}}
+# This is a tag or tags we add to better keep track
+Version:0.0.<<now YYYY0MM0DD0hh0mm>>
+AuthorNaturalName:Your Name <youremail@example.com>
+# List is the files in $:/plugins/{{##authorusername}}/{{##pluginname}} for the control panel
+list:deltas
+source:
+# No need to change below line
+# Title must follow convention for plugins, such as $:/plugins/author/plugin_name
+title:$:/plugins/{{##AuthorShortName}}/{{##WikiShortName}}
