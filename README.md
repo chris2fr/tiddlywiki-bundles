@@ -1,6 +1,12 @@
-<h1>AsPlugin</h1>
+<h1>AsPlugout</h1>
 
-AsPlugin is a ~TiddlyWiki plugin which aims to automagically manage content from ~TiddlyWiki wikis as plugins themselves. The idea is to "import" other wikis into a current wiki with the plugin mechanism. The plugin mechanism is powerful because of shadow tiddlers. Shadow tiddlers are a kind of version control in ~TiddlyWiki.
+<b>Important:</b> as of version 0.0.8, there is a name change. If you have installed v.0.0.7 or previously, you need to manually delete [[$:/plugins/christopher/asplugin]].
+
+Currently, AsPlugout furnishes an export filter for this wiki as a "plugout." A plugout is really just a plugin, but in a plugouts folder instead of a plugins folder, and with mainly content shadow tiddlers instead of functional tiddlers. You just drag the exported file to other ~TiddlyWiki files, and you have a convenient method of accessing "plugged-out" content. Recovering changes is pretty easy too with the .json format. Start with the [[config dialog|$:/plugins/chris2fr/asplugout/config]] when you are ready.
+
+<h2>Longer Discussion</h2>
+
+AsPlugout is a ~TiddlyWiki plugin which aims to automagically manage content from ~TiddlyWiki wikis as plugins themselves. The idea is to "import" other wikis into a current wiki with the plugin mechanism. The plugin mechanism is powerful because of shadow tiddlers. Shadow tiddlers are a kind of version control in ~TiddlyWiki.
 
 Right now, AsPlugin proposes an additional export filter regrouping all selected tiddlers in a configured plugin from the export menu in the wiki, the search or the advanced search interfaces.After having exported the tiddlers as a plugin in a .tid file, you can then import the .tid file into any other wiki. The .tid file is actually a plugin, and all the included tiddlers become shadow tiddlers of that plugin.
 
@@ -13,14 +19,6 @@ https://raw.githubusercontent.com/chris2fr/tiddlywiki-as-plugin/master/build/asp
 You need to save that to your local filesystem, take off the .txt extension, then import it into your wiki for now.
 
 Source : https://github.com/chris2fr/tiddlywiki-as-plugin/
-
-<h2>Usage</h2>
-
-This is an additional export filter. Save the file as a .tid, for example for "All Tiddlers" in the side-menu. Save the file. Import the file into another Wiki.
-
-To configure, please change the variables in [[$:/plugins/chris2fr/asplugin/config]].
-
-For example, to create this plugin, I did an advanced search with the filter "[tag[AsPlugin]]" and then simply exported the results as a plugin.
 
 <h2>Roadmap</h2>
 
