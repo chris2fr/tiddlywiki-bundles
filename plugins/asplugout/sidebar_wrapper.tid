@@ -1,5 +1,5 @@
 tags: Chris2Fr/AsPlugout $:/tags/SideBar
-title: $:/plugins/chris2fr/asplugout/sidebar
+title: $:/plugins/chris2fr/asplugout/sidebar/wrapper
 type: text/vnd.tiddlywiki
 list-after: $:/core/ui/SideBar/Recent
 caption: Plugout

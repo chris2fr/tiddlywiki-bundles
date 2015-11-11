@@ -13,7 +13,7 @@ caption: Plugout
 
 !Configure Your Plugout
 
-<$checkbox tag="$:/tags/SideBar" tiddler="$:/plugins/chris2fr/asplugout/sidebar"/> Include Plugout ~SideBar. Otherwise, just use the control panel.
+<$checkbox tag="$:/tags/SideBar" tiddler="$:/plugins/chris2fr/asplugout/sidebar/wrapper"/> Include Plugout ~SideBar. Otherwise, just use the control panel.
 
 <$button>
 Reset / Initialize Configuration Settings from Current Wiki
