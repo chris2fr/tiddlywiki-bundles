@@ -46,6 +46,8 @@ I would like to version the Wikis through Git on the Plugin server, somehow.
 
 Perhaps the plugin could be included in the core some day.
 
+Include a search-all function in the sidebar.
+
 <h2>Notes</h2>
 
 This file is maintained in the ./source/readme.tid and copied to ./README.md.
