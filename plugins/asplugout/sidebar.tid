@@ -1,8 +1,11 @@
-tags: Chris2Fr/AsPlugout $:/tags/SideBar
+tags: Chris2Fr/AsPlugout
 title: $:/plugins/chris2fr/asplugout/sidebar
 type: text/vnd.tiddlywiki
 list-after: $:/core/ui/SideBar/Recent
-caption: Plugout
+
+Coming soon (not yet), a search that includes shadow tiddlers: <$edit-text />
+
+---
 
 {{$:/plugins/chris2fr/asplugout/config}}
 
