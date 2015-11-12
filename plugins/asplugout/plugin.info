@@ -3,7 +3,7 @@
 	"description": "AsPlugout - Export Tiddlers as Shadows in a Plugout (like a Plugin)",
 	"author": "Christopher Mann <christopher@mann.fr>",
 	"core-version": ">=5.0.0",
-	"list": "config usage readme ",
+	"list": "readme config usage changelog",
   "source": "https://github.com/chris2fr/tiddlywiki-as-plugin",
-	"version": "0.0.11a"
+	"version": "0.0.11"
 }

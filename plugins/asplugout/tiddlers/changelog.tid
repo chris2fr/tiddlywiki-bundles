@@ -1,0 +1,20 @@
+title: $:/plugins/chris2fr/asplugout/changelog
+type: text/vnd.tiddlywiki
+
+!AsPlugout ChangeLog
+
+!! Version 0.0.11
+
+2015-11-12
+
+Changes:
+
+* Created ChangeLog
+* Default to Not Include Sidebar by Default
+* Possible Regression to Initialize Variables
+
+Current Features:
+
+* Configure Plugin Parameters via Control Panel
+* Export Filter as plugin
+* Configurable Sidebar for Export via Stub Mechanism
