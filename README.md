@@ -1,5 +1,16 @@
 <h1>AsPlugout</h1>
 
+Features :
+
+* New Export Filter "As Plugin"
+* Configure Plugin Parameters via Control Panel
+* Configuration via Sidebar if desired
+* Multiple Named Configuration Bundles per Wiki
+* ReadMe Generated from Configuration Tiddler Body
+* Button to Advanced Search Filter for Selective Export
+* Initialization with Default Settings from Wiki Variables
+
+
 <b>Important:</b> as of version 0.0.8, there is a name change. If you have installed v.0.0.7 or previously, you need to manually delete [[$:/plugins/christopher/asplugin]].
 
 Currently, AsPlugout furnishes an export filter for this wiki as a "plugout." A plugout is really just a plugin, but in a plugouts folder instead of a plugins folder, and with mainly content shadow tiddlers instead of functional tiddlers. You just drag the exported file to other ~TiddlyWiki files, and you have a convenient method of accessing "plugged-out" content. Recovering changes is pretty easy too with the .json format. Start with the [[config dialog|$:/plugins/chris2fr/asplugout/config]] when you are ready.
