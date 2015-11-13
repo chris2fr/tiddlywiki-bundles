@@ -5,5 +5,5 @@
 	"core-version": ">=5.0.0",
 	"list": "readme config usage changelog",
   "source": "https://github.com/chris2fr/tiddlywiki-as-plugin",
-	"version": "0.0.13"
+	"version": "0.0.13post1"
 }

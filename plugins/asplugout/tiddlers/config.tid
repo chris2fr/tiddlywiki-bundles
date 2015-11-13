@@ -25,6 +25,13 @@ text={{$:/config/chris2fr/asplugout/ReadMe}}/>
 <$action-setfield $tiddler="""$:/config/chris2fr/asplugout/ReadMe""" text=<<siteSubTitle>>/>
 <$action-setfield $tiddler="""$:/temp/chris2fr/asplugout/targetBundleName""" text="Default"/>
 \end
+\define renderSearchButton(  )
+<$button>
+Filter
+<$action-setfield $tiddler="$:/temp/advancedsearch" text={{$:/config/chris2fr/asplugout/Filter}}/>
+<$action-navigate $to=" $:/AdvancedSearch"/>
+</$button>
+\end
 
 !Configure Your Plugout
 
@@ -44,7 +51,7 @@ Init Default Configuration
 | [[AuthorNaturalName|$:/config/chris2fr/asplugout/AuthorNaturalName]]|<$edit-text tiddler="$:/config/chris2fr/asplugout/AuthorNaturalName" tag="input" type="text" size="50"/><br/>Email convention is good "John Smith &lt;john.smith@example.com&gt;"|
 | [[List|$:/config/chris2fr/asplugout/List]]|{{$:/config/chris2fr/asplugout/List}}|
 | [[Version|$:/config/chris2fr/asplugout/Version]]|{{$:/config/chris2fr/asplugout/Version}}|
-| [[Filter (not yet used)|$:/config/chris2fr/asplugout/Filter]]|<$edit-text tiddler="$:/config/chris2fr/asplugout/Filter" tag="input" type="text" default="[all[tiddlers]]" size="50"/>|
+| <<renderSearchButton>>|<$edit-text tiddler="$:/config/chris2fr/asplugout/Filter" tag="input" type="text" default="[all[tiddlers]]" size="50"/>|
 | [[ReadMe|$:/config/chris2fr/asplugout/ReadMe]]|$:/config/chris2fr/asplugout/ReadMe|
 
 {{$:/plugins/chris2fr/asplugout/config/sanitize}}
