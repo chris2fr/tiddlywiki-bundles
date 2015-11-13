@@ -1,0 +1,9 @@
+title: $:/plugins/chris2fr/asplugout/config/LoadBundleTemplate
+
+<$button>
+Load {{!!WikiShortName}}
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/WikiShortName" text={{!!WikiShortName}}/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/WikiNaturalName" text={{!!WikiNaturalName}}/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/AuthorShortName" text={{!!AuthorShortName}}/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/AuthorNaturalName" text={{!!AuthorNaturalName}}/>
+</$button>

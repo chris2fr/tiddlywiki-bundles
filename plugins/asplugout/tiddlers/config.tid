@@ -1,10 +1,20 @@
 title: $:/plugins/chris2fr/asplugout/config
 type: text/vnd.tiddlywiki
 
-\define renderCheckShortName(targetTiddler shortName)
+\define renderSaveBundleButton( targetBundleName )
+<$button>
+Save bundle as
+<$action-sendmessage $message="tm-new-tiddler" title="$/config/chris2fr/asplugout/bundles/$(targetBundleName)$" tags="" text="This is the $(targetBundleName)$ bundle." WikiShortName={{$:/config/chris2fr/asplugout/WikiShortName}}/>
+<$action-setfield text={{$:/config/chris2fr/asplugout/WikiShortName}} $tiddler="""$/config/chris2fr/asplugout/bundles/$(targetBundleName)$!!WikiShortName"""/>
+<$action-setfield text={{$:/config/chris2fr/asplugout/WikiNaturalName}} $tiddler="""$/config/chris2fr/asplugout/bundles/$(targetBundleName)$!!WikiNaturalName"""/>
+<$action-setfield text={{$:/config/chris2fr/asplugout/AuthorShortName}} $tiddler="""$/config/chris2fr/asplugout/bundles/$(targetBundleName)$!!AuthorShortName"""/>
+<$action-setfield text={{$:/config/chris2fr/asplugout/AuthorNaturalName}} $tiddler="""$/config/chris2fr/asplugout/bundles/$(targetBundleName)$!!AuthorNaturalName"""/>
+</$button>
+\end
+\define renderCheckShortName( targetTiddler shortName )
 <$action-setfield $tiddler="""$targetTiddler$""" $value=<<checkShortName shortName:"""$shortName$""" >>/>
 \end
-\define renderCheckNaturalName(targetTiddler naturalName)
+\define renderCheckNaturalName( targetTiddler naturalName )
 <$action-setfield $tiddler="""$targetTiddler$""" $value=<<checkNaturalName naturalName:"""$naturalName$""" >>/>
 \end
 
@@ -27,6 +37,14 @@ Reset / Initialize Configuration Settings from Current Wiki
 | [[Version|$:/config/chris2fr/asplugout/Version]]|{{$:/config/chris2fr/asplugout/Version}}|
 
 {{$:/plugins/chris2fr/asplugout/config/sanitize}}
+
+<$set name="targetBundleName" value={{$:/temp/chris2fr/asplugout/targetBundleName}}>
+<<renderSaveBundleButton targetBundleName:"""$(targetBundleName)$""">>
+<$edit-text tiddler="$:/temp/chris2fr/asplugout/targetBundleName" tag="input" type="text" size="16"/>
+</$set>
+
+<$list filter="[all[tiddlers+shadows]prefix[$/config/chris2fr/asplugout/bundles/]]" template="$:/plugins/chris2fr/asplugout/config/LoadBundleTemplate"/>
+
 
 <$button>
 Sanitize Configuration Settings
