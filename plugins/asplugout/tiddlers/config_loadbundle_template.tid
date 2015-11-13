@@ -1,9 +1,16 @@
 title: $:/plugins/chris2fr/asplugout/config/LoadBundleTemplate
 
+\define renderLinkAsText( link text ) [[$(text)$|$(link)$]]
+
 <$button>
-Load {{!!WikiShortName}}
-<$action-setfield $tiddler="$:/config/chris2fr/asplugout/WikiShortName" text={{!!WikiShortName}}/>
-<$action-setfield $tiddler="$:/config/chris2fr/asplugout/WikiNaturalName" text={{!!WikiNaturalName}}/>
-<$action-setfield $tiddler="$:/config/chris2fr/asplugout/AuthorShortName" text={{!!AuthorShortName}}/>
-<$action-setfield $tiddler="$:/config/chris2fr/asplugout/AuthorNaturalName" text={{!!AuthorNaturalName}}/>
+Load {{!!savename}}
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/WikiShortName" text={{!!wikishortname}}/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/WikiNaturalName" text={{!!wikinaturalname}}/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/AuthorShortName" text={{!!authorshortname}}/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/AuthorNaturalName" text={{!!authornaturalname}}/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/Filter" text={{!!filter}}/>
+<$action-setfield $tiddler="$:/temp/chris2fr/asplugout/targetBundleName" text={{!!savename}}/>
 </$button>
+<$vars link={{!!title}} text="+">
+<<renderLinkAsText link:"""$(link)$""" text:"""$(link)$""">>
+</$vars>

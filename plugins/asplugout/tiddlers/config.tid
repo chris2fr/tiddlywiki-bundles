@@ -4,11 +4,9 @@ type: text/vnd.tiddlywiki
 \define renderSaveBundleButton( targetBundleName )
 <$button>
 Save bundle as
-<$action-sendmessage $message="tm-new-tiddler" title="$/config/chris2fr/asplugout/bundles/$(targetBundleName)$" tags="" text="This is the $(targetBundleName)$ bundle." WikiShortName={{$:/config/chris2fr/asplugout/WikiShortName}}/>
-<$action-setfield text={{$:/config/chris2fr/asplugout/WikiShortName}} $tiddler="""$/config/chris2fr/asplugout/bundles/$(targetBundleName)$!!WikiShortName"""/>
-<$action-setfield text={{$:/config/chris2fr/asplugout/WikiNaturalName}} $tiddler="""$/config/chris2fr/asplugout/bundles/$(targetBundleName)$!!WikiNaturalName"""/>
-<$action-setfield text={{$:/config/chris2fr/asplugout/AuthorShortName}} $tiddler="""$/config/chris2fr/asplugout/bundles/$(targetBundleName)$!!AuthorShortName"""/>
-<$action-setfield text={{$:/config/chris2fr/asplugout/AuthorNaturalName}} $tiddler="""$/config/chris2fr/asplugout/bundles/$(targetBundleName)$!!AuthorNaturalName"""/>
+<$action-sendmessage $message="tm-new-tiddler" title="$:/config/chris2fr/asplugout/bundles/$(targetBundleName)$" tags="" text="This is the $(targetBundleName)$ bundle." wikishortname={{$:/config/chris2fr/asplugout/WikiShortName}} wikinaturalname={{$:/config/chris2fr/asplugout/WikiNaturalName}} authorshortname={{$:/config/chris2fr/asplugout/AuthorShortName}} authornaturalname={{$:/config/chris2fr/asplugout/AuthorNaturalName}}
+filter={{$:/config/chris2fr/asplugout/Filter}}
+savename="""$(targetBundleName)$"""/>
 </$button>
 \end
 \define renderCheckShortName( targetTiddler shortName )
@@ -17,16 +15,25 @@ Save bundle as
 \define renderCheckNaturalName( targetTiddler naturalName )
 <$action-setfield $tiddler="""$targetTiddler$""" $value=<<checkNaturalName naturalName:"""$naturalName$""" >>/>
 \end
+\define setDefaults( siteTitle userName siteSubTitle)
+<$action-setfield $tiddler="""$:/config/chris2fr/asplugout/WikiShortName""" text=<<checkShortName shortName:$siteTitle$>>/>
+<$action-setfield $tiddler="""$:/config/chris2fr/asplugout/AuthorShortName""" text=<<checkShortName shortName:"""$(userName)$""">>/>
+<$action-setfield $tiddler="""$:/config/chris2fr/asplugout/WikiNaturalName""" text=<<checkNaturalName naturalName:"""$(siteTitle)$""">>/>
+<$action-setfield $tiddler="""$:/config/chris2fr/asplugout/AuthorNaturalName""" text=<<checkNaturalName naturalName:"""$(userName)$""">>/>
+<$action-setfield $tiddler="""$:/config/chris2fr/asplugout/Filter""" text="[all[tiddlers]]"/>
+<$action-setfield $tiddler="""$:/temp/chris2fr/asplugout/targetBundleName""" text="Default"/>
+\end
 
 !Configure Your Plugout
 
 <$checkbox tag="$:/tags/SideBar" tiddler="$:/plugins/chris2fr/asplugout/sidebar/wrapper"/> Include Plugout ~SideBar. Otherwise, just use the control panel.
 
+<$vars siteTitle={{$:/SiteTitle}} userName={{$:/status/UserName}} siteSubTitle={{$:/SiteSubtitle}}>
 <$button>
-Reset / Initialize Configuration Settings from Current Wiki
-{{$:/plugins/chris2fr/asplugout/config/initialize}}
-{{$:/plugins/chris2fr/asplugout/config/sanitize}}
+Init Default Configuration
+<<setDefaults siteTitle:"""$(siteTitle)$""" userName:"""$(userName)$""" siteSubTitle:"""$(siteSubTitle)$""">>
 </$button>
+</$vars>
 
 | [[WikiShortName|$:/config/chris2fr/asplugout/WikiShortName]]|<$edit-text tiddler="$:/config/chris2fr/asplugout/WikiShortName" tag="input" type="text" size="25"/><br/>No spaces or special characters|
 | [[AuthorShortName|\$:/config/chris2fr/asplugout/AuthorShortName]]|<$edit-text tiddler="$:/config/chris2fr/asplugout/AuthorShortName" tag="input" type="text" size="25"/><br/>No spaces or special characters|
@@ -35,16 +42,18 @@ Reset / Initialize Configuration Settings from Current Wiki
 | [[AuthorNaturalName|$:/config/chris2fr/asplugout/AuthorNaturalName]]|<$edit-text tiddler="$:/config/chris2fr/asplugout/AuthorNaturalName" tag="input" type="text" size="50"/><br/>Email convention is good "John Smith &lt;john.smith@example.com&gt;"|
 | [[List|$:/config/chris2fr/asplugout/List]]|{{$:/config/chris2fr/asplugout/List}}|
 | [[Version|$:/config/chris2fr/asplugout/Version]]|{{$:/config/chris2fr/asplugout/Version}}|
+| [[Filter (not yet used)|$:/config/chris2fr/asplugout/Filter]]|<$edit-text tiddler="$:/config/chris2fr/asplugout/Filter" tag="input" type="text" default="[all[tiddlers]]" size="50"/>|
 
 {{$:/plugins/chris2fr/asplugout/config/sanitize}}
 
 <$set name="targetBundleName" value={{$:/temp/chris2fr/asplugout/targetBundleName}}>
 <<renderSaveBundleButton targetBundleName:"""$(targetBundleName)$""">>
-<$edit-text tiddler="$:/temp/chris2fr/asplugout/targetBundleName" tag="input" type="text" size="16"/>
 </$set>
+<$edit-text tiddler="$:/temp/chris2fr/asplugout/targetBundleName" tag="input" type="text" size="16"/>
 
-<$list filter="[all[tiddlers+shadows]prefix[$/config/chris2fr/asplugout/bundles/]]" template="$:/plugins/chris2fr/asplugout/config/LoadBundleTemplate"/>
-
+<$list filter="[all[tiddlers+shadows]prefix[$:/config/chris2fr/asplugout/bundles/]]">
+{{||$:/plugins/chris2fr/asplugout/config/LoadBundleTemplate}}
+</$list>
 
 <$button>
 Sanitize Configuration Settings

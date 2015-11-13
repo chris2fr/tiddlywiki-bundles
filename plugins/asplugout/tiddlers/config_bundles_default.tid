@@ -1,10 +1,12 @@
-title: $/config/chris2fr/asplugout/bundles/default
-tags: $/config/chris2fr/asplugout/bundles
+title: $:/config/chris2fr/asplugout/bundles/default
+tags: $:/config/chris2fr/asplugout/bundles
 type: text/vnd.tiddlywiki
-WikiShortName: DefaultWikiShortName
-AuthorShortName: DefaultAuthorShortName
-WikiNaturalName: Default Wiki Natural Name
-AuthorNaturalName: Default Author <natural@name.com>
-List: deltas
+wikishortname: DefaultWikiShortName
+authorshortname: DefaultAuthorShortName
+wikinaturalname: Default Wiki Natural Name
+authornaturalname: Default Author <natural@name.com>
+list: deltas
+savename: Default
+filter: [all[tiddlers]]
 
 This is the default bundle
