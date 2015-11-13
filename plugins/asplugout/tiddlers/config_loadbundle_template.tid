@@ -10,6 +10,7 @@ Load {{!!savename}}
 <$action-setfield $tiddler="$:/config/chris2fr/asplugout/AuthorNaturalName" text={{!!authornaturalname}}/>
 <$action-setfield $tiddler="$:/config/chris2fr/asplugout/Filter" text={{!!filter}}/>
 <$action-setfield $tiddler="$:/temp/chris2fr/asplugout/targetBundleName" text={{!!savename}}/>
+<$action-setfield $tiddler="$:/config/chris2fr/asplugout/ReadMe" text={{!!text}}/>
 </$button>
 <$vars link={{!!title}} text="+">
 <<renderLinkAsText link:"""$(link)$""" text:"""$(link)$""">>

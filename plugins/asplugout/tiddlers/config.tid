@@ -6,7 +6,8 @@ type: text/vnd.tiddlywiki
 Save bundle as
 <$action-sendmessage $message="tm-new-tiddler" title="$:/config/chris2fr/asplugout/bundles/$(targetBundleName)$" tags="" text="This is the $(targetBundleName)$ bundle." wikishortname={{$:/config/chris2fr/asplugout/WikiShortName}} wikinaturalname={{$:/config/chris2fr/asplugout/WikiNaturalName}} authorshortname={{$:/config/chris2fr/asplugout/AuthorShortName}} authornaturalname={{$:/config/chris2fr/asplugout/AuthorNaturalName}}
 filter={{$:/config/chris2fr/asplugout/Filter}}
-savename="""$(targetBundleName)$"""/>
+savename="""$(targetBundleName)$"""
+text={{$:/config/chris2fr/asplugout/ReadMe}}/>
 </$button>
 \end
 \define renderCheckShortName( targetTiddler shortName )
@@ -21,6 +22,7 @@ savename="""$(targetBundleName)$"""/>
 <$action-setfield $tiddler="""$:/config/chris2fr/asplugout/WikiNaturalName""" text=<<checkNaturalName naturalName:"""$(siteTitle)$""">>/>
 <$action-setfield $tiddler="""$:/config/chris2fr/asplugout/AuthorNaturalName""" text=<<checkNaturalName naturalName:"""$(userName)$""">>/>
 <$action-setfield $tiddler="""$:/config/chris2fr/asplugout/Filter""" text="[all[tiddlers]]"/>
+<$action-setfield $tiddler="""$:/config/chris2fr/asplugout/ReadMe""" text=<<siteSubTitle>>/>
 <$action-setfield $tiddler="""$:/temp/chris2fr/asplugout/targetBundleName""" text="Default"/>
 \end
 
@@ -43,6 +45,7 @@ Init Default Configuration
 | [[List|$:/config/chris2fr/asplugout/List]]|{{$:/config/chris2fr/asplugout/List}}|
 | [[Version|$:/config/chris2fr/asplugout/Version]]|{{$:/config/chris2fr/asplugout/Version}}|
 | [[Filter (not yet used)|$:/config/chris2fr/asplugout/Filter]]|<$edit-text tiddler="$:/config/chris2fr/asplugout/Filter" tag="input" type="text" default="[all[tiddlers]]" size="50"/>|
+| [[ReadMe|$:/config/chris2fr/asplugout/ReadMe]]|$:/config/chris2fr/asplugout/ReadMe|
 
 {{$:/plugins/chris2fr/asplugout/config/sanitize}}
 

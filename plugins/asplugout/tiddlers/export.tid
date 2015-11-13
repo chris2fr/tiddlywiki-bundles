@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 \end
 author: {{$:/config/chris2fr/asplugout/AuthorNaturalName}}
 description: {{$:/config/chris2fr/asplugout/WikiNaturalName}}
-list: deltas
+list: {{$:/config/chris2fr/asplugout/List}}
 plugin-type: plugin
 title: {{$:/config/chris2fr/asplugout/Title}}
 type: application/json

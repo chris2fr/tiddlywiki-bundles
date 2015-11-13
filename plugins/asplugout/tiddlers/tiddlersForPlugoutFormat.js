@@ -57,14 +57,20 @@ exports.run = function(filter, wikiShortName, authorShortName) {
 				data["tiddlers"][fields["title"]]["tags"] += " " + wikiAuthorTitle;
 			}
       data["tiddlers"][fields["title"]]["tags"] = data["tiddlers"][fields["title"]]["tags"].trim();
-			// adding an extra tiddler for deltas
-			data["tiddlers"][wikiFullPath + "/deltas"] = {
-				"title":wikiFullPath + "/deltas",
-				"tags":wikiAuthorTitle,
-				"text":"!Deltas on local wiki\n\nUse  $:/AdvancedSearch with this filter `[plugout[" + wikiAuthorTitle + "]]`\n\n{{{[plugout[" + wikiAuthorTitle + "]]}}}"
-			};
+
 		}
 	}
+	// adding an extra tiddler for deltas
+	data["tiddlers"][wikiFullPath + "/deltas"] = {
+		"title":wikiFullPath + "/deltas",
+		"tags":wikiAuthorTitle,
+		"text":"!Deltas on local wiki\n\nUse  $:/AdvancedSearch with this filter `[plugout[" + wikiAuthorTitle + "]]`\n\n{{{[plugout[" + wikiAuthorTitle + "]]}}}"
+	};
+	data["tiddlers"][wikiFullPath + "/readme"] = {
+		"title":wikiFullPath + "/readme",
+		"tags":wikiAuthorTitle,
+		"text":this.wiki.getTiddler("$:/config/chris2fr/asplugout/ReadMe").getFieldString("text")
+	};
 	return JSON.stringify(data,null,$tw.config.preferences.jsonSpaces);
 };
 
