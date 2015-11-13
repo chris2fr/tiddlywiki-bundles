@@ -3,6 +3,14 @@ type: text/vnd.tiddlywiki
 
 !AsPlugout ChangeLog
 
+!! Version 0.0.14
+
+2015-11-13
+
+Changes:
+
+* Added link to advanced search filter
+
 !! Version 0.0.13
 
 2015-11-13

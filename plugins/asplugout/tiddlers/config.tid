@@ -21,7 +21,7 @@ text={{$:/config/chris2fr/asplugout/ReadMe}}/>
 <$action-setfield $tiddler="""$:/config/chris2fr/asplugout/AuthorShortName""" text=<<checkShortName shortName:"""$(userName)$""">>/>
 <$action-setfield $tiddler="""$:/config/chris2fr/asplugout/WikiNaturalName""" text=<<checkNaturalName naturalName:"""$(siteTitle)$""">>/>
 <$action-setfield $tiddler="""$:/config/chris2fr/asplugout/AuthorNaturalName""" text=<<checkNaturalName naturalName:"""$(userName)$""">>/>
-<$action-setfield $tiddler="""$:/config/chris2fr/asplugout/Filter""" text="[all[tiddlers]]"/>
+<$action-setfield $tiddler="""$:/config/chris2fr/asplugout/Filter""" text="[!prefix[$]]"/>
 <$action-setfield $tiddler="""$:/config/chris2fr/asplugout/ReadMe""" text=<<siteSubTitle>>/>
 <$action-setfield $tiddler="""$:/temp/chris2fr/asplugout/targetBundleName""" text="Default"/>
 \end
@@ -29,7 +29,7 @@ text={{$:/config/chris2fr/asplugout/ReadMe}}/>
 <$button>
 Filter
 <$action-setfield $tiddler="$:/temp/advancedsearch" text={{$:/config/chris2fr/asplugout/Filter}}/>
-<$action-navigate $to="$:/AdvancedSearch"/>
+<$action-navigate $to="$:/core/ui/AdvancedSearch/Filter"/>
 </$button>
 \end
 
