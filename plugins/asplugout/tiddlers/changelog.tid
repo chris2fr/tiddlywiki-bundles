@@ -3,6 +3,15 @@ type: text/vnd.tiddlywiki
 
 !AsPlugout ChangeLog
 
+!! Version 0.0.12
+
+2015-11-13
+
+Changes:
+
+* Added capacity to bundle plugout settings
+* Fixed initialization of plugout settings
+
 !! Version 0.0.11
 
 2015-11-12
