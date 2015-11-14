@@ -35,17 +35,9 @@ $label$
 
 !Configure Your Bundles
 
-!! Migration to howwownow/bundles
-
-<$macrocall $name="renderSearchButton" label="Migrate Plugin Tiddlers" searchFilter="[prefix[$:/plugins/chris2fr/asplugout]]" />
-
-<$macrocall $name="renderSearchButton" label="Migrate Configuration Tiddlers" searchFilter="[prefix[$:/config/chris2fr/asplugout]]" />
-
-<$macrocall $name="renderSearchButton" label="Migrate Temp Tiddlers" searchFilter="[prefix[$:/temp/chris2fr/asplugout]]" />
-
 !! Sidebar
 
-<$checkbox tag="$:/tags/SideBar" tiddler="$:/plugins/howwownow/bundles/sidebar/wrapper"/> Include Plugout ~SideBar. Otherwise, just use the control panel.
+<$checkbox tag="$:/tags/SideBar" tiddler="$:/config/howwownow/bundles/sidebar/wrapper"/> Include Plugout ~SideBar. Otherwise, just use the control panel.
 
 !! Init Default Config / Bundle
 
@@ -87,3 +79,11 @@ Sanitize Configuration Settings
 <$list filter="[all[tiddlers+shadows]prefix[$:/config/howwownow/bundles/mybundles/]]">
 {{||$:/plugins/howwownow/bundles/config/LoadBundleTemplate}}
 </$list>
+
+!! Migration to howwownow/bundles
+
+<$macrocall $name="renderSearchButton" label="Migrate Plugin Tiddlers" searchFilter="[prefix[$:/plugins/chris2fr/asplugout]]" />
+
+<$macrocall $name="renderSearchButton" label="Migrate Configuration Tiddlers" searchFilter="[prefix[$:/config/chris2fr/asplugout]]" />
+
+<$macrocall $name="renderSearchButton" label="Migrate Temp Tiddlers" searchFilter="[prefix[$:/temp/chris2fr/asplugout]]" />
