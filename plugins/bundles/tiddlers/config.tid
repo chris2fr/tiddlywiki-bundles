@@ -82,6 +82,8 @@ Sanitize Configuration Settings
 
 !! Migration to howwownow/bundles
 
+Just delete the corresponding tiddlers.
+
 <$macrocall $name="renderSearchButton" label="Migrate Plugin Tiddlers" searchFilter="[prefix[$:/plugins/chris2fr/asplugout]]" />
 
 <$macrocall $name="renderSearchButton" label="Migrate Configuration Tiddlers" searchFilter="[prefix[$:/config/chris2fr/asplugout]]" />
