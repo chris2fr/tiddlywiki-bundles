@@ -1,0 +1,6 @@
+title: $:/config/howwownow/bundles/sidebar/wrapper
+type: text/vnd.tiddlywiki
+list-after: $:/core/ui/SideBar/Recent
+caption: Bundles
+
+{{$:/plugins/howwownow/bundles/sidebar}}
