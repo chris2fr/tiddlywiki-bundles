@@ -37,7 +37,7 @@ $label$
 
 !! Migration to howwownow/bundles
 
-<$macrocall $name="renderSearchButton" label="Migrate Plugin Tiddlers" searchFilter="[prefix[$:/plugin/chris2fr/asplugout]]" />
+<$macrocall $name="renderSearchButton" label="Migrate Plugin Tiddlers" searchFilter="[prefix[$:/plugins/chris2fr/asplugout]]" />
 
 <$macrocall $name="renderSearchButton" label="Migrate Configuration Tiddlers" searchFilter="[prefix[$:/config/chris2fr/asplugout]]" />
 
