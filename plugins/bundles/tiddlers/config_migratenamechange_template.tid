@@ -1,0 +1,17 @@
+title: $:/plugins/howwownow/bundles/config/MigrateNameChange/Template
+
+
+! WORK IN PROGRESS TO BE PUT IN config.tid
+
+<$macrocall $name="relativeTitle" fullTitle={{!!title}} oldRootTitle="""$(sourcePrefix)$""" newRootTitle="""$(targetPrefix)$"""/>
+
+<$set name="filterPrefix" value="[prefix[$:/plugin/chris2fr/asplugout]]">
+<$set name="targetPrefix" value="[prefix[$:/plugin/howwownow/bundles]]">
+<$button>
+Migrate <<filterPrefix>>
+<$list filter=<<filterPrefix>> >
+{{||$:/plugins/howwownow/bundles/config/MigrateNameChange/Template}}
+<$/list>
+</$button>
+</$set>
+</$set>

@@ -1,0 +1,17 @@
+title: $:/plugins/howwownow/bundles/config/LoadBundleTemplate
+
+\define renderLinkAsText( link text ) [[$(text)$|$(link)$]]
+
+<$button>
+Load {{!!savename}}
+<$action-setfield $tiddler="$:/config/howwownow/bundles/WikiShortName" text={{!!wikishortname}}/>
+<$action-setfield $tiddler="$:/config/howwownow/bundles/WikiNaturalName" text={{!!wikinaturalname}}/>
+<$action-setfield $tiddler="$:/config/howwownow/bundles/AuthorShortName" text={{!!authorshortname}}/>
+<$action-setfield $tiddler="$:/config/howwownow/bundles/AuthorNaturalName" text={{!!authornaturalname}}/>
+<$action-setfield $tiddler="$:/config/howwownow/bundles/Filter" text={{!!filter}}/>
+<$action-setfield $tiddler="$:/temp/howwownow/bundles/targetBundleName" text={{!!savename}}/>
+<$action-setfield $tiddler="$:/config/howwownow/bundles/ReadMe" text={{!!text}}/>
+</$button>
+<$vars link={{!!title}} text="+">
+<<renderLinkAsText link:"""$(link)$""" text:"""$(link)$""">>
+</$vars>

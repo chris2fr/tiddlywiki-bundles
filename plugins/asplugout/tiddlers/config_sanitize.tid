@@ -1,5 +1,0 @@
-tags: Chris2Fr/AsPlugout
-title: $:/plugins/chris2fr/asplugout/config/sanitize
-type: text/vnd.tiddlywiki
-
-<$set name="shortName" value={{$:/config/chris2fr/asplugout/WikiShortName}}><<renderCheckShortName targetTiddler:"$:/config/chris2fr/asplugout/WikiShortName" shortName:"""$(shortName)$""">><$set name="shortName" value={{$:/config/chris2fr/asplugout/AuthorShortName}}><<renderCheckShortName targetTiddler:"$:/config/chris2fr/asplugout/AuthorShortName" shortName:"""$(shortName)$""">></$set><$set name="naturalName" value={{$:/config/chris2fr/asplugout/WikiNaturalName}}><<renderCheckNaturalName targetTiddler:"$:/config/chris2fr/asplugout/WikiNaturalName" naturalName:"""$(naturalName)$""">></$set><$set name="naturalName" value={{$:/config/chris2fr/asplugout/AuthorNaturalName}}><<renderCheckNaturalName targetTiddler:"$:/config/chris2fr/asplugout/AuthorNaturalName" naturalName:"""$(naturalName)$""">></$set>

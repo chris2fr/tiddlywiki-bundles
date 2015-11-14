@@ -1,0 +1,89 @@
+title: $:/plugins/howwownow/bundles/config
+type: text/vnd.tiddlywiki
+
+\define renderSaveBundleButton( targetBundleName )
+<$button>
+Save bundle as
+<$action-sendmessage $message="tm-new-tiddler" title="$:/config/howwownow/bundles/mybundles/$(targetBundleName)$" tags="" text="This is the $(targetBundleName)$ bundle." wikishortname={{$:/config/howwownow/bundles/WikiShortName}} wikinaturalname={{$:/config/howwownow/bundles/WikiNaturalName}} authorshortname={{$:/config/howwownow/bundles/AuthorShortName}} authornaturalname={{$:/config/howwownow/bundles/AuthorNaturalName}}
+filter={{$:/config/howwownow/bundles/Filter}}
+savename="""$(targetBundleName)$"""
+text={{$:/config/howwownow/bundles/ReadMe}}/>
+</$button>
+\end
+\define renderCheckShortName( targetTiddler shortName )
+<$action-setfield $tiddler="""$targetTiddler$""" $value=<<checkShortName shortName:"""$shortName$""" >>/>
+\end
+\define renderCheckNaturalName( targetTiddler naturalName )
+<$action-setfield $tiddler="""$targetTiddler$""" $value=<<checkNaturalName naturalName:"""$naturalName$""" >>/>
+\end
+\define setDefaults( siteTitle userName siteSubTitle)
+<$action-setfield $tiddler="""$:/config/howwownow/bundles/WikiShortName""" text=<<checkShortName shortName:$siteTitle$>>/>
+<$action-setfield $tiddler="""$:/config/howwownow/bundles/AuthorShortName""" text=<<checkShortName shortName:"""$(userName)$""">>/>
+<$action-setfield $tiddler="""$:/config/howwownow/bundles/WikiNaturalName""" text=<<checkNaturalName naturalName:"""$(siteTitle)$""">>/>
+<$action-setfield $tiddler="""$:/config/howwownow/bundles/AuthorNaturalName""" text=<<checkNaturalName naturalName:"""$(userName)$""">>/>
+<$action-setfield $tiddler="""$:/config/howwownow/bundles/Filter""" text="[!prefix[$]]"/>
+<$action-setfield $tiddler="""$:/config/howwownow/bundles/ReadMe""" text=<<siteSubTitle>>/>
+<$action-setfield $tiddler="""$:/temp/howwownow/bundles/targetBundleName""" text="Default"/>
+\end
+\define renderSearchButton( label searchFilter )
+<$button>
+$label$
+<$action-setfield $tiddler="$:/temp/advancedsearch" text="""$searchFilter$"""/>
+<$action-navigate $to="$:/core/ui/AdvancedSearch/Filter"/>
+</$button>
+\end
+
+!Configure Your Bundles
+
+!! Migration to howwownow/bundles
+
+<$macrocall $name="renderSearchButton" label="Migrate Plugin Tiddlers" searchFilter="[prefix[$:/plugin/chris2fr/asplugout]]" />
+
+<$macrocall $name="renderSearchButton" label="Migrate Configuration Tiddlers" searchFilter="[prefix[$:/config/chris2fr/asplugout]]" />
+
+<$macrocall $name="renderSearchButton" label="Migrate Temp Tiddlers" searchFilter="[prefix[$:/temp/chris2fr/asplugout]]" />
+
+!! Sidebar
+
+<$checkbox tag="$:/tags/SideBar" tiddler="$:/plugins/howwownow/bundles/sidebar/wrapper"/> Include Plugout ~SideBar. Otherwise, just use the control panel.
+
+!! Init Default Config / Bundle
+
+<$vars siteTitle={{$:/SiteTitle}} userName={{$:/status/UserName}} siteSubTitle={{$:/SiteSubtitle}}>
+<$button>
+Init Default Configuration / Bundle
+<<setDefaults siteTitle:"""$(siteTitle)$""" userName:"""$(userName)$""" siteSubTitle:"""$(siteSubTitle)$""">>
+</$button>
+</$vars>
+
+!! Current Configuration / Bundle
+
+| [[WikiShortName|$:/config/howwownow/bundles/WikiShortName]]|<$edit-text tiddler="$:/config/howwownow/bundles/WikiShortName" tag="input" type="text" size="25"/><br/>No spaces or special characters|
+| [[AuthorShortName|\$:/config/howwownow/bundles/AuthorShortName]]|<$edit-text tiddler="$:/config/howwownow/bundles/AuthorShortName" tag="input" type="text" size="25"/><br/>No spaces or special characters|
+| [[Title|$:/config/howwownow/bundles/Title]]|{{$:/config/howwownow/bundles/Title}}|
+| [[WikiNaturalName|$:/config/howwownow/bundles/WikiNaturalName]]|<$edit-text tiddler="$:/config/howwownow/bundles/WikiNaturalName" tag="input" type="text" default={{$:/SiteSubtitle}} size="50"/><br/>One-line description (will be plugin name)|
+| [[AuthorNaturalName|$:/config/howwownow/bundles/AuthorNaturalName]]|<$edit-text tiddler="$:/config/howwownow/bundles/AuthorNaturalName" tag="input" type="text" size="50"/><br/>Email convention is good "John Smith &lt;john.smith@example.com&gt;"|
+| [[List|$:/config/howwownow/bundles/List]]|{{$:/config/howwownow/bundles/List}}|
+| [[Version|$:/config/howwownow/bundles/Version]]|{{$:/config/howwownow/bundles/Version}}|
+| <$macrocall $name="renderSearchButton" label="Filter" searchFilter={{$:/config/howwownow/bundles/Filter}} />|<$edit-text tiddler="$:/config/howwownow/bundles/Filter" tag="input" type="text" default="[all[tiddlers]]" size="50"/>|
+| [[ReadMe|$:/config/howwownow/bundles/ReadMe]]|$:/config/howwownow/bundles/ReadMe|
+
+{{$:/plugins/howwownow/bundles/config/sanitize}}
+
+<$button>
+Sanitize Configuration Settings
+{{$:/plugins/howwownow/bundles/config/sanitize}}
+</$button>
+
+!! Save Bundle Configuration
+
+<$set name="targetBundleName" value={{$:/temp/howwownow/bundles/targetBundleName}}>
+<<renderSaveBundleButton targetBundleName:"""$(targetBundleName)$""">>
+</$set>
+<$edit-text tiddler="$:/temp/howwownow/bundles/targetBundleName" tag="input" type="text" size="16"/>
+
+!! Saved Bundle Configurations
+
+<$list filter="[all[tiddlers+shadows]prefix[$:/config/howwownow/bundles/mybundles/]]">
+{{||$:/plugins/howwownow/bundles/config/LoadBundleTemplate}}
+</$list>

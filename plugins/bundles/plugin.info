@@ -1,0 +1,9 @@
+{
+	"title": "$:/plugins/howwownow/bundles",
+	"description": "Bundles - Export Tiddlers as Shadows in a Plugout (like a Plugin)",
+	"author": "Christopher Mann <christopher@mann.fr>",
+	"core-version": ">=5.0.0",
+	"list": "readme config usage changelog",
+  "source": "https://github.com/howwownow/tiddlywiki-as-plugin",
+	"version": "0.0.15"
+}

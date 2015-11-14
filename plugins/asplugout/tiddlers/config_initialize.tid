@@ -1,8 +1,0 @@
-tags: Chris2Fr/AsPlugout
-title: $:/plugins/chris2fr/asplugout/config/initialize
-type: text/vnd.tiddlywiki
-
-<$action-setfield $tiddler="$:/config/chris2fr/asplugout/WikiShortName" $value={{$:/SiteTitle}}/>
-<$action-setfield $tiddler="$:/config/chris2fr/asplugout/AuthorShortName" $value="MeMyselfAndI"/>
-<$action-setfield $tiddler="$:/config/chris2fr/asplugout/WikiNaturalName" $value={{$:/SiteSubtitle}}/>
-<$action-setfield $tiddler="$:/config/chris2fr/asplugout/AuthorNaturalName" $value={{$:/status/UserName}}/>

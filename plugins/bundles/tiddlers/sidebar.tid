@@ -1,5 +1,5 @@
-tags: Chris2Fr/AsPlugout
-title: $:/plugins/chris2fr/asplugout/sidebar
+tags: HowWowNow/Bundles
+title: $:/plugins/howwownow/bundles/sidebar
 type: text/vnd.tiddlywiki
 list-after: $:/core/ui/SideBar/Recent
 
@@ -7,8 +7,8 @@ Coming soon (not yet), a search that includes shadow tiddlers: [ Put Search Box 
 
 ---
 
-{{$:/plugins/chris2fr/asplugout/config}}
+{{$:/plugins/howwownow/bundles/config}}
 
 ---
 
-{{$:/plugins/chris2fr/asplugout/usage}}
+{{$:/plugins/howwownow/bundles/usage}}

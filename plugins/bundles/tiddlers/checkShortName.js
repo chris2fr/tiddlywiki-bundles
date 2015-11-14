@@ -2,7 +2,7 @@
 title: checkShortName
 type: application/javascript
 module-type: macro
-tags: Chris2Fr/AsPlugout
+tags: HowWowNow/Bundles
 
 Macro to output tiddlers matching a filter to Plugin
 

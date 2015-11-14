@@ -1,7 +1,16 @@
-title: $:/plugins/chris2fr/asplugout/changelog
+title: $:/plugins/howwownow/bundles/changelog
 type: text/vnd.tiddlywiki
 
-!AsPlugout ChangeLog
+!Bundles ChangeLog
+
+!!Release 0.0.15
+
+2015-11-14
+
+* Name Change from AsPlugout to Bundles
+* Publisher Change from Chris2Fr to HowWowNow
+
+Everything previously in `$:/{plugins,config,temp}/chris2fr/asplugout` is now in `$:/{plugins,config,temp}/howwownow/bundles`. I intend to change the GITHUB from tiddlywiki-as-plugin to tiddlywiki-bundles.
 
 !! Version 0.0.14
 

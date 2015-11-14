@@ -1,10 +1,10 @@
-tags: Chris2Fr/AsPlugout
-title: $:/plugins/chris2fr/asplugout/usage
+tags: HowWowNow/Bundles
+title: $:/plugins/howwownow/bundles/usage
 type: text/vnd.tiddlywiki
 
-!AsPlugout Usage
+!Bundles Usage
 
-# ''Before all else'' please configure the name of the export wiki here: [[$:/plugins/chris2fr/asplugout/config]].
+# ''Before all else'' please configure the name of the export wiki here: [[$:/plugins/howwownow/bundles/config]].
 # Export the tiddlers you are interested in via an export dialogue {{$:/core/images/export-button}} (arrow facing up in an open box).
 #* Either all the tiddlers of this ~TiddlyWiki with the "Export All" option in the sidebar
 #* Or results of an $:/AdvancedSearch if you want a subset

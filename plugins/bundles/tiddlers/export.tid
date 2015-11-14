@@ -1,0 +1,24 @@
+description: ~TwiddlyWiki as Plugout (.tid)
+extension: .tid
+tags: $:/tags/Exporter HowWowNow/Bundles
+title: $:/plugins/howwownow/bundles/export
+type: text/vnd.tiddlywiki
+
+\define renderContent( authorShortName:"""MeMyselfAndI""" wikiShortName:"""MyWiki""" )
+<$text text=<<tiddlersForPlugoutFormat filter:"""$(exportFilter)$""" authorShortName:"""$authorShortName$""" wikiShortName:"""$wikiShortName$""">>/>
+\end
+author: {{$:/config/howwownow/bundles/AuthorNaturalName}}
+description: {{$:/config/howwownow/bundles/WikiNaturalName}}
+list: {{$:/config/howwownow/bundles/List}}
+plugin-type: plugin
+title: {{$:/config/howwownow/bundles/Title}}
+type: application/json
+version: {{$:/config/howwownow/bundles/Version}}
+"""
+
+"""
+<$set name="authorShortName" value={{$:/config/howwownow/bundles/AuthorShortName}}>
+<$set name="wikiShortName" value={{$:/config/howwownow/bundles/WikiShortName}}>
+<<renderContent authorShortName:"""$(authorShortName)$"""  wikiShortName:"""$(wikiShortName)$""">>
+</$set>
+</$set>

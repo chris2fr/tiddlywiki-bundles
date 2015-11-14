@@ -2,7 +2,7 @@
 title: tiddlersForPlugoutFormat
 type: application/javascript
 module-type: macro
-tags: Chris2Fr/AsPlugout
+tags: HowWowNow/Bundles
 
 Macro to output tiddlers matching a filter to Plugin
 
@@ -69,7 +69,7 @@ exports.run = function(filter, wikiShortName, authorShortName) {
 	data["tiddlers"][wikiFullPath + "/readme"] = {
 		"title":wikiFullPath + "/readme",
 		"tags":wikiAuthorTitle,
-		"text":this.wiki.getTiddler("$:/config/chris2fr/asplugout/ReadMe").getFieldString("text")
+		"text":this.wiki.getTiddler("$:/config/howwownow/bundles/ReadMe").getFieldString("text")
 	};
 	return JSON.stringify(data,null,$tw.config.preferences.jsonSpaces);
 };
