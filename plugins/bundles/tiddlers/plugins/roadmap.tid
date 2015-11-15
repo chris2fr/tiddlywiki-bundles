@@ -1,0 +1,38 @@
+created: 20151115091634064
+creator: Guest
+modified: 20151115092007472
+modifier: Guest
+revision: 1
+tags: Bundles
+title: $:/plugins/howwownow/bundles/roadmap
+type: text/vnd.tiddlywiki
+
+BundlesUiImprovements
+
+Add Another Search Bar To Include Shadows or Have the Main Search Bar Include Bundles
+
+Rename Plugouts to Bundles in Export
+
+Factor Out this [[RoadMap|$:/plugins/howwownow/bundles/roadmap]] File from [[ReadMe|$:/plugins/howwownow/bundles/readme]] and Transclude Accordingly
+
+UseRealDiff
+
+I would like to setup a "library source" where the exported plugins could be sent to a library on a public server for update on distributed wikis.
+
+I also would like to register this plugin in a library. Perhaps TWGuides at http://twguides.org.
+
+It would be nice to have a front-end to the config data tiddler.
+
+It would be nice to use that plugin to create the GitHub plugin for my ~TiddlyWiki on this subject.
+
+Perhaps I can create a dedicated wiki to AsPlugin. I could then share that wiki on TWGuides.org.
+
+It would be nice to set up translations of the plugin.
+
+I would like to be able to commit changed Tiddlers to the source wiki as change sets for merge.
+
+I would like to version the Wikis through Git on the Plugin server, somehow.
+
+Perhaps the plugin could be included in the core some day.
+
+Include a search-all function in the sidebar.

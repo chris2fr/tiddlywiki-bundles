@@ -11,6 +11,8 @@ type: text/vnd.tiddlywiki
 * Placement of Tiddlers in Subfolders
 * Added Diff Feature
 * Added UnDiff Feature
+* Configured Diff / Undiff Enabled / Disabled
+* Configured AddJumpTag Enabled / Disabled
 
 !!Release 0.0.15
 
