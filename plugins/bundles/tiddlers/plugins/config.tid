@@ -10,21 +10,25 @@ savename="""$targetBundleName$"""
 text={{$:/config/howwownow/bundles/ReadMe}}/>
 </$button>
 \end
+
 \define renderCheckShortName( targetTiddler shortName )
 <$action-setfield $tiddler="""$targetTiddler$""" $value=<<checkShortName shortName:"""$shortName$""" >>/>
 \end
+
 \define renderCheckNaturalName( targetTiddler naturalName )
 <$action-setfield $tiddler="""$targetTiddler$""" $value=<<checkNaturalName naturalName:"""$naturalName$""" >>/>
 \end
+
 \define setDefaults( siteTitle userName siteSubTitle)
 <$action-setfield $tiddler="""$:/config/howwownow/bundles/WikiShortName""" text=<<checkShortName shortName:$siteTitle$>>/>
 <$action-setfield $tiddler="""$:/config/howwownow/bundles/AuthorShortName""" text=<<checkShortName shortName:"""$userName$""">>/>
 <$action-setfield $tiddler="""$:/config/howwownow/bundles/WikiNaturalName""" text=<<checkNaturalName naturalName:"""$siteTitle$""">>/>
 <$action-setfield $tiddler="""$:/config/howwownow/bundles/AuthorNaturalName""" text=<<checkNaturalName naturalName:"""$userName$""">>/>
 <$action-setfield $tiddler="""$:/config/howwownow/bundles/Filter""" text="[!prefix[$]]"/>
-<$action-setfield $tiddler="""$:/config/howwownow/bundles/ReadMe""" text=<<siteSubTitle>>/>
-<$action-setfield $tiddler="""$:/temp/howwownow/bundles/targetBundleName""" text="Default"/>
+<$action-setfield $tiddler="""$:/config/howwownow/bundles/ReadMe""" text={{$:/SiteSubtitle}}/>
+<$action-setfield $tiddler="""$:/temp/howwownow/bundles/targetBundleName""" text=<<checkShortName shortName:$siteTitle$>>/>
 \end
+
 \define renderSearchButton( label searchFilter )
 <$button>
 $label$
