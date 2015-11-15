@@ -1,0 +1,29 @@
+title: $:/plugins/howwownow/bundles/DiffShadow
+type: text/vnd.tiddlywiki
+
+\define showDiff(source,requiredField)
+<$list filter="[title[$source$]has[$requiredField$]!prefix[diff/]]">
+<$button>
+Diff
+<$action-setfield $tiddler="""$source$""" title="""diff/$source$"""/>
+<$action-setfield $tiddler="""diff/$source$""" sourcediff="""$source$"""/>
+<$action-setfield $tiddler="""diff/$source$""" text={{!!text}}/>
+<$action-navigate $to="""diff/$source$"""/>
+<$action-deletetiddler $tiddler="""$source$"""/>
+<$action-navigate $to="""$source$"""/>
+</$button>
+</$list>
+<$list filter="[title[$source$]has[$requiredField$]prefix[diff/]]">
+<$button>
+Undiff
+<$action-setfield $tiddler="""$source$""" title={{!!sourcediff}}/>
+<$action-setfield $tiddler={{!!sourcediff}} text={{!!text}}/>
+<$action-navigate $to="""$source$"""/>
+<$action-sendmessage $message="tm-close-tiddler" $tiddler="""$source$"""/>
+<$action-deletetiddler $tiddler="""$source$"""/>
+</$button>
+</$list>
+\end
+
+
+<$macrocall $name="showDiff" source={{!!title}} requiredField={{$:/config/howwownow/goodies/diffshadow/RequiredField}} />

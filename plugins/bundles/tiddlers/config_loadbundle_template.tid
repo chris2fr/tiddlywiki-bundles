@@ -1,6 +1,6 @@
 title: $:/plugins/howwownow/bundles/config/LoadBundleTemplate
 
-\define renderLinkAsText( link text ) [[$(text)$|$(link)$]]
+\define renderLinkAsText( link text ) [[$text$|$link$]]
 
 <$button>
 Load {{!!savename}}
@@ -12,6 +12,4 @@ Load {{!!savename}}
 <$action-setfield $tiddler="$:/temp/howwownow/bundles/targetBundleName" text={{!!savename}}/>
 <$action-setfield $tiddler="$:/config/howwownow/bundles/ReadMe" text={{!!text}}/>
 </$button>
-<$vars link={{!!title}} text="+">
-<<renderLinkAsText link:"""$(link)$""" text:"""$(link)$""">>
-</$vars>
+<$macrocall $name="renderLinkAsText" link={{!!title}} text="+"/>

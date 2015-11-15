@@ -4,9 +4,9 @@ type: text/vnd.tiddlywiki
 \define renderSaveBundleButton( targetBundleName )
 <$button>
 Save bundle as
-<$action-sendmessage $message="tm-new-tiddler" title="$:/config/howwownow/bundles/mybundles/$(targetBundleName)$" tags="" text="This is the $(targetBundleName)$ bundle." wikishortname={{$:/config/howwownow/bundles/WikiShortName}} wikinaturalname={{$:/config/howwownow/bundles/WikiNaturalName}} authorshortname={{$:/config/howwownow/bundles/AuthorShortName}} authornaturalname={{$:/config/howwownow/bundles/AuthorNaturalName}}
+<$action-sendmessage $message="tm-new-tiddler" title="$:/config/howwownow/bundles/mybundles/$targetBundleName$" tags="" text="This is the $targetBundleName$ bundle." wikishortname={{$:/config/howwownow/bundles/WikiShortName}} wikinaturalname={{$:/config/howwownow/bundles/WikiNaturalName}} authorshortname={{$:/config/howwownow/bundles/AuthorShortName}} authornaturalname={{$:/config/howwownow/bundles/AuthorNaturalName}}
 filter={{$:/config/howwownow/bundles/Filter}}
-savename="""$(targetBundleName)$"""
+savename="""$targetBundleName$"""
 text={{$:/config/howwownow/bundles/ReadMe}}/>
 </$button>
 \end
@@ -18,9 +18,9 @@ text={{$:/config/howwownow/bundles/ReadMe}}/>
 \end
 \define setDefaults( siteTitle userName siteSubTitle)
 <$action-setfield $tiddler="""$:/config/howwownow/bundles/WikiShortName""" text=<<checkShortName shortName:$siteTitle$>>/>
-<$action-setfield $tiddler="""$:/config/howwownow/bundles/AuthorShortName""" text=<<checkShortName shortName:"""$(userName)$""">>/>
-<$action-setfield $tiddler="""$:/config/howwownow/bundles/WikiNaturalName""" text=<<checkNaturalName naturalName:"""$(siteTitle)$""">>/>
-<$action-setfield $tiddler="""$:/config/howwownow/bundles/AuthorNaturalName""" text=<<checkNaturalName naturalName:"""$(userName)$""">>/>
+<$action-setfield $tiddler="""$:/config/howwownow/bundles/AuthorShortName""" text=<<checkShortName shortName:"""$userName$""">>/>
+<$action-setfield $tiddler="""$:/config/howwownow/bundles/WikiNaturalName""" text=<<checkNaturalName naturalName:"""$siteTitle$""">>/>
+<$action-setfield $tiddler="""$:/config/howwownow/bundles/AuthorNaturalName""" text=<<checkNaturalName naturalName:"""$userName$""">>/>
 <$action-setfield $tiddler="""$:/config/howwownow/bundles/Filter""" text="[!prefix[$]]"/>
 <$action-setfield $tiddler="""$:/config/howwownow/bundles/ReadMe""" text=<<siteSubTitle>>/>
 <$action-setfield $tiddler="""$:/temp/howwownow/bundles/targetBundleName""" text="Default"/>
@@ -39,14 +39,16 @@ $label$
 
 <$checkbox tag="$:/tags/SideBar" tiddler="$:/config/howwownow/bundles/sidebar/wrapper"/> Include Plugout ~SideBar. Otherwise, just use the control panel.
 
+!! Diff Shadow
+
+<$checkbox tag="$:/tags/ViewTemplate" tiddler="$:/config/howwownow/bundles/stubs/viewtemplate/DiffShadow"/> Include Diff Feature for Individual Tiddlers from View Mode
+
 !! Init Default Config / Bundle
 
-<$vars siteTitle={{$:/SiteTitle}} userName={{$:/status/UserName}} siteSubTitle={{$:/SiteSubtitle}}>
 <$button>
 Init Default Configuration / Bundle
-<<setDefaults siteTitle:"""$(siteTitle)$""" userName:"""$(userName)$""" siteSubTitle:"""$(siteSubTitle)$""">>
+<$macrocall $name="setDefaults" siteTitle={{$:/SiteTitle}} userName={{$:/status/UserName}} siteSubTitle={{$:/SiteSubtitle}}/>
 </$button>
-</$vars>
 
 !! Current Configuration / Bundle
 
@@ -70,7 +72,7 @@ Sanitize Configuration Settings
 !! Save Bundle Configuration
 
 <$set name="targetBundleName" value={{$:/temp/howwownow/bundles/targetBundleName}}>
-<<renderSaveBundleButton targetBundleName:"""$(targetBundleName)$""">>
+<$macrocall $name="renderSaveBundleButton" targetBundleName={{$:/temp/howwownow/bundles/targetBundleName}}/>
 </$set>
 <$edit-text tiddler="$:/temp/howwownow/bundles/targetBundleName" tag="input" type="text" size="16"/>
 

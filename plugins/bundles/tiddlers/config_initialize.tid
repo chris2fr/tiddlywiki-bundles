@@ -1,8 +1,0 @@
-tags: HowWowNow/Bundles
-title: $:/plugins/howwownow/bundles/config/initialize
-type: text/vnd.tiddlywiki
-
-<$action-setfield $tiddler="$:/config/howwownow/bundles/WikiShortName" $value={{$:/SiteTitle}}/>
-<$action-setfield $tiddler="$:/config/howwownow/bundles/AuthorShortName" $value="MeMyselfAndI"/>
-<$action-setfield $tiddler="$:/config/howwownow/bundles/WikiNaturalName" $value={{$:/SiteSubtitle}}/>
-<$action-setfield $tiddler="$:/config/howwownow/bundles/AuthorNaturalName" $value={{$:/status/UserName}}/>

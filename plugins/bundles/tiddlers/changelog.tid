@@ -3,6 +3,12 @@ type: text/vnd.tiddlywiki
 
 !Bundles ChangeLog
 
+!!Release 0.0.16
+
+2015-11-14
+
+* Internals and documentation cleanup.
+
 !!Release 0.0.15
 
 2015-11-14

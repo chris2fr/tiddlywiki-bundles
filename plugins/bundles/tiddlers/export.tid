@@ -1,4 +1,4 @@
-description: ~TwiddlyWiki as Plugout (.tid)
+description: Plugin Bundle (.tid)
 extension: .tid
 tags: $:/tags/Exporter HowWowNow/Bundles
 title: $:/plugins/howwownow/bundles/export
@@ -17,8 +17,6 @@ version: {{$:/config/howwownow/bundles/Version}}
 """
 
 """
-<$set name="authorShortName" value={{$:/config/howwownow/bundles/AuthorShortName}}>
-<$set name="wikiShortName" value={{$:/config/howwownow/bundles/WikiShortName}}>
-<<renderContent authorShortName:"""$(authorShortName)$"""  wikiShortName:"""$(wikiShortName)$""">>
+<$macrocall $name="renderContent" authorShortName={{$:/config/howwownow/bundles/WikiShortName}}  wikiShortName={{$:/config/howwownow/bundles/AuthorShortName}}/>
 </$set>
 </$set>

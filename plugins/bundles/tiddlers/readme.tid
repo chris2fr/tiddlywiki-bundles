@@ -5,25 +5,26 @@ type: text/vnd.tiddlywiki
 
 Features :
 
-* New Export Filter "As Plugin"
+* New Export Filter "As Bundle"
 * Configure Plugin Parameters via Control Panel
 * Configuration via Sidebar if desired
 * Multiple Named Configuration Bundles per Wiki
 * ReadMe Generated from Configuration Tiddler Body
 * Button to Advanced Search Filter for Selective Export
 * Initialization with Default Settings from Wiki Variables
+* Helper to rename tiddlers from v.0.0.7-v.0.0.14 to v.0.0.15
 
-<b>Important:</b> as of version 0.0.15, there is a name change. If you have installed v.0.0.7 or previously, you need to manually delete [[$:/plugins/chris2fr/asplugout]].  Old configuation files need to be deleted, replaced or moved to howwownow/bundles.
+<b>Important:</b> as of version 0.0.15, there is a name change. If you have installed v.0.0.14 or previously, you need to manually delete [[$:/plugins/chris2fr/asplugout]].  Old configuration files need to be deleted, replaced or moved to howwownow/bundles.
 
 <b>Important:</b> as of version 0.0.8, there is a name change. If you have installed v.0.0.7 or previously, you need to manually delete [[$:/plugins/christopher/asplugin]].
 
-Currently, Bundles furnishes an export filter for this wiki as a "plugout." A plugout is really just a plugin, but in a plugouts folder instead of a plugins folder, and with mainly content shadow tiddlers instead of functional tiddlers. You just drag the exported file to other ~TiddlyWiki files, and you have a convenient method of accessing "plugged-out" content. Recovering changes is pretty easy too with the .json format. Start with the [[config dialog|$:/plugins/howwownow/bundles/config]] when you are ready.
+Currently, Bundles furnishes an export filter for this wiki as a plugin with mainly content shadow tiddlers instead of functional tiddlers. You just drag the exported file to other ~TiddlyWiki files, and you have a convenient method of accessing "plugged-out" content. Recovering changes is pretty easy too with the .json format. Start with the [[config dialog|$:/plugins/howwownow/bundles/config]] when you are ready.
 
 <h2>Longer Discussion</h2>
 
 Bundles is a ~TiddlyWiki plugin which aims to automagically manage content from ~TiddlyWiki wikis as plugins themselves. The idea is to "import" other wikis into a current wiki with the plugin mechanism. The plugin mechanism is powerful because of shadow tiddlers. Shadow tiddlers are a kind of version control in ~TiddlyWiki.
 
-Right now, AsPlugin proposes an additional export filter regrouping all selected tiddlers in a configured plugin from the export menu in the wiki, the search or the advanced search interfaces.After having exported the tiddlers as a plugin in a .tid file, you can then import the .tid file into any other wiki. The .tid file is actually a plugin, and all the included tiddlers become shadow tiddlers of that plugin.
+Right now, Bundles proposes an additional export filter regrouping all selected tiddlers in a configured plugin from the export menu in the wiki, the search or the advanced search interfaces.After having exported the tiddlers as a plugin in a .tid file, you can then import the .tid file into any other wiki. The .tid file is actually a plugin, and all the included tiddlers become shadow tiddlers of that plugin.
 
 In the future, I would like to explore using other features of the plugin mechanism. The library server could be a way to centralize changes to plugged-out ~TiddlyWikis for automagic updates to the including ~TiddlyWikis. Changes on the including ~TiddlyWikis could be proposed to the included ~TiddlyWiki for update, if desired: incorporate back and delete.
 
