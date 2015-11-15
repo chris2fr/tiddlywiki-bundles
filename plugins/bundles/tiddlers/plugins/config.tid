@@ -43,6 +43,8 @@ $label$
 
 <$checkbox tag="$:/tags/ViewTemplate" tiddler="$:/config/howwownow/bundles/stubs/viewtemplate/DiffShadow"/> Include Diff Feature for Individual Tiddlers from View Mode
 
+Filter condition to show Diff button <$edit-text tiddler="$:/config/howwownow/bundles/DiffShadow/RequiredField" tag="input" type="text" size="12" default="plugout"/>
+
 !! Init Default Config / Bundle
 
 <$button>

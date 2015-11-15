@@ -27,4 +27,4 @@ Undiff
 \end
 
 
-<$macrocall $name="showDiff" source={{!!title}} requiredField={{$:/config/howwownow/goodies/diffshadow/RequiredField}} />
+<$macrocall $name="showDiff" source={{!!title}} requiredField={{$:/config/howwownow/bundles/DiffShadow/RequiredField}} />

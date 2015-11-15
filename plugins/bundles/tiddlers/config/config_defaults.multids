@@ -11,3 +11,4 @@ Version: 0.0.<<now YYYY0MM0DD0hh0mm0ss>>
 List: readme deltas
 ReadMe: Default Readme File.
 Filter: [!prefix[$]]
+DiffShadow/RequiredField: plugout
