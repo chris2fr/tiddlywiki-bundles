@@ -1,0 +1,42 @@
+title: $:/plugins/howwownow/bundles/config/tabs/configuration
+type: text/vnd.tiddlywiki
+tags: $:/plugins/howwownow/bundles/config/tabs
+caption: configuration
+
+! Configure Your Bundles
+
+!! Load Bundle Configuration
+
+<$list filter="[all[tiddlers+shadows]prefix[$:/config/howwownow/bundles/mybundles/]]">
+{{||$:/plugins/howwownow/bundles/config/LoadBundleTemplate}}
+</$list>
+
+!! Current Bundle Configuration
+
+| [[WikiShortName|$:/config/howwownow/bundles/WikiShortName]]|<$edit-text tiddler="$:/config/howwownow/bundles/WikiShortName" tag="input" type="text" size="25"/><br/>No spaces or special characters|
+| [[AuthorShortName|\$:/config/howwownow/bundles/AuthorShortName]]|<$edit-text tiddler="$:/config/howwownow/bundles/AuthorShortName" tag="input" type="text" size="25"/><br/>No spaces or special characters|
+| [[Title|$:/config/howwownow/bundles/Title]]|{{$:/config/howwownow/bundles/Title}}|
+| [[WikiNaturalName|$:/config/howwownow/bundles/WikiNaturalName]]|<$edit-text tiddler="$:/config/howwownow/bundles/WikiNaturalName" tag="input" type="text" default={{$:/SiteSubtitle}} size="50"/><br/>One-line description (will be plugin name)|
+| [[AuthorNaturalName|$:/config/howwownow/bundles/AuthorNaturalName]]|<$edit-text tiddler="$:/config/howwownow/bundles/AuthorNaturalName" tag="input" type="text" size="50"/><br/>Email convention is good "John Smith &lt;john.smith@example.com&gt;"|
+| [[List|$:/config/howwownow/bundles/List]]|{{$:/config/howwownow/bundles/List}}|
+| [[Version|$:/config/howwownow/bundles/Version]]|{{$:/config/howwownow/bundles/Version}}|
+| <$macrocall $name="renderSearchButton" label="Filter" searchFilter={{$:/config/howwownow/bundles/Filter}} />|<$edit-text tiddler="$:/config/howwownow/bundles/Filter" tag="input" type="text" default="[all[tiddlers]]" size="50"/>|
+| [[ReadMe|$:/config/howwownow/bundles/ReadMe]]|$:/config/howwownow/bundles/ReadMe|
+
+<$button>
+Normalize Configuration Variables
+{{$:/plugins/howwownow/bundles/config/sanitize}}
+</$button>
+
+<$button>
+Initialize Bundle Configuration from Wiki Variables
+<$macrocall $name="setDefaults" siteTitle={{$:/SiteTitle}} userName={{$:/status/UserName}} siteSubTitle={{$:/SiteSubtitle}}/>
+</$button>
+
+!! Save Bundle Configuration
+
+<$set name="targetBundleName" value={{$:/temp/howwownow/bundles/targetBundleName}}>
+<$macrocall $name="renderSaveBundleButton" targetBundleName={{$:/temp/howwownow/bundles/targetBundleName}}/>
+</$set>
+<$edit-text tiddler="$:/temp/howwownow/bundles/targetBundleName" tag="input" type="text" size="16"/>
+

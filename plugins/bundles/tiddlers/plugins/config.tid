@@ -37,63 +37,9 @@ $label$
 </$button>
 \end
 
-!Configure Your Bundles
+<<tabs "[all[shadows+tiddlers]tag[$:/plugins/howwownow/bundles/config/tabs]]" "$:/plugins/howwownow/bundles/config/tabs/configuration" "$:/state/howwownow/bundles/config/tab" "tc-vertical">>
 
-!! Sidebar
 
-<$checkbox tag="$:/tags/SideBar" tiddler="$:/config/howwownow/bundles/sidebar/wrapper"/> Include Plugout ~SideBar. Otherwise, just use the control panel.
 
-!! Diff Shadow
 
-<$checkbox tag="$:/tags/ViewTemplate" tiddler="$:/config/howwownow/bundles/stubs/viewtemplate/DiffShadow"/> Include Diff Feature for Individual Tiddlers from View Mode
 
-Filter condition to show Diff button <$edit-text tiddler="$:/config/howwownow/bundles/DiffShadow/RequiredField" tag="input" type="text" size="12" default="plugout"/>
-
-!! Init Default Config / Bundle
-
-<$button>
-Init Default Configuration / Bundle
-<$macrocall $name="setDefaults" siteTitle={{$:/SiteTitle}} userName={{$:/status/UserName}} siteSubTitle={{$:/SiteSubtitle}}/>
-</$button>
-
-!! Current Configuration / Bundle
-
-| [[WikiShortName|$:/config/howwownow/bundles/WikiShortName]]|<$edit-text tiddler="$:/config/howwownow/bundles/WikiShortName" tag="input" type="text" size="25"/><br/>No spaces or special characters|
-| [[AuthorShortName|\$:/config/howwownow/bundles/AuthorShortName]]|<$edit-text tiddler="$:/config/howwownow/bundles/AuthorShortName" tag="input" type="text" size="25"/><br/>No spaces or special characters|
-| [[Title|$:/config/howwownow/bundles/Title]]|{{$:/config/howwownow/bundles/Title}}|
-| [[WikiNaturalName|$:/config/howwownow/bundles/WikiNaturalName]]|<$edit-text tiddler="$:/config/howwownow/bundles/WikiNaturalName" tag="input" type="text" default={{$:/SiteSubtitle}} size="50"/><br/>One-line description (will be plugin name)|
-| [[AuthorNaturalName|$:/config/howwownow/bundles/AuthorNaturalName]]|<$edit-text tiddler="$:/config/howwownow/bundles/AuthorNaturalName" tag="input" type="text" size="50"/><br/>Email convention is good "John Smith &lt;john.smith@example.com&gt;"|
-| [[List|$:/config/howwownow/bundles/List]]|{{$:/config/howwownow/bundles/List}}|
-| [[Version|$:/config/howwownow/bundles/Version]]|{{$:/config/howwownow/bundles/Version}}|
-| <$macrocall $name="renderSearchButton" label="Filter" searchFilter={{$:/config/howwownow/bundles/Filter}} />|<$edit-text tiddler="$:/config/howwownow/bundles/Filter" tag="input" type="text" default="[all[tiddlers]]" size="50"/>|
-| [[ReadMe|$:/config/howwownow/bundles/ReadMe]]|$:/config/howwownow/bundles/ReadMe|
-
-{{$:/plugins/howwownow/bundles/config/sanitize}}
-
-<$button>
-Sanitize Configuration Settings
-{{$:/plugins/howwownow/bundles/config/sanitize}}
-</$button>
-
-!! Save Bundle Configuration
-
-<$set name="targetBundleName" value={{$:/temp/howwownow/bundles/targetBundleName}}>
-<$macrocall $name="renderSaveBundleButton" targetBundleName={{$:/temp/howwownow/bundles/targetBundleName}}/>
-</$set>
-<$edit-text tiddler="$:/temp/howwownow/bundles/targetBundleName" tag="input" type="text" size="16"/>
-
-!! Saved Bundle Configurations
-
-<$list filter="[all[tiddlers+shadows]prefix[$:/config/howwownow/bundles/mybundles/]]">
-{{||$:/plugins/howwownow/bundles/config/LoadBundleTemplate}}
-</$list>
-
-!! Migration to howwownow/bundles
-
-Just delete the corresponding tiddlers.
-
-<$macrocall $name="renderSearchButton" label="Migrate Plugin Tiddlers" searchFilter="[prefix[$:/plugins/chris2fr/asplugout]]" />
-
-<$macrocall $name="renderSearchButton" label="Migrate Configuration Tiddlers" searchFilter="[prefix[$:/config/chris2fr/asplugout]]" />
-
-<$macrocall $name="renderSearchButton" label="Migrate Temp Tiddlers" searchFilter="[prefix[$:/temp/chris2fr/asplugout]]" />
