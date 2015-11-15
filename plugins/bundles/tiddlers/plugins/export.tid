@@ -18,5 +18,3 @@ version: {{$:/config/howwownow/bundles/Version}}
 
 """
 <$macrocall $name="renderContent" authorShortName={{$:/config/howwownow/bundles/WikiShortName}}  wikiShortName={{$:/config/howwownow/bundles/AuthorShortName}}/>
-</$set>
-</$set>
