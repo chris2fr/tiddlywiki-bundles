@@ -1,7 +1,7 @@
 title: $:/plugins/howwownow/bundles/DiffShadow
 type: text/vnd.tiddlywiki
 
-\define showDiff(source,requiredField)
+\define showDiff( source requiredField )
 <$list filter="[title[$source$]has[$requiredField$]!prefix[diff/]]">
 <$button>
 Diff
