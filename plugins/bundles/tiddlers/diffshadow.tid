@@ -5,6 +5,7 @@ type: text/vnd.tiddlywiki
 <$list filter="[title[$source$]has[$requiredField$]!prefix[diff/]]">
 <$button>
 Diff
+<$action-sendmessage $message="tm-close-other-tiddlers"/>
 <$action-setfield $tiddler="""$source$""" title="""diff/$source$"""/>
 <$action-setfield $tiddler="""diff/$source$""" sourcediff="""$source$"""/>
 <$action-setfield $tiddler="""diff/$source$""" text={{!!text}}/>
