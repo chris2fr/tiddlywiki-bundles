@@ -8,6 +8,7 @@ type: text/vnd.tiddlywiki
 2015-11-15
 
 * Added in-place export, but it only works from tiddlywiki wiki --rendertiddler ...
+* Added tabs to config tiddler
 
 !!Release 0.0.16
 
