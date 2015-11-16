@@ -1,5 +1,7 @@
 title: $:/plugins/howwownow/bundles/readme
 type: text/vnd.tiddlywiki
+caption: readme
+tags: $:/plugins/howwownow/bundles/config/tabs
 
 <h1>Bundles</h1>
 
