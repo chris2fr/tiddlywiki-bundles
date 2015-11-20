@@ -1,6 +1,15 @@
 title: $:/plugins/howwownow/bundles/AddAtPlugout
-tags: $:/tags/EditTemplate
+tags: $:/tags/ViewTemplate
 listItem: +@
 caption: +@
 
-{{!!title}}@{{!!plugout}}
+\define addAtPlugout( whichTiddler whichWiki )
+<$list filter="[title[$whichTiddler$]is[shadow]has[plugout]">
+<$button>
+@{{!!plugout}}
+<$action-navigate $to="$whichTiddler$@$whichWiki$"/>
+</$button>
+</$list>
+\end
+
+<$macrocall $name="addAtPlugout" whichTiddler={{!!title}} whichWiki={{!!plugout}}/>
