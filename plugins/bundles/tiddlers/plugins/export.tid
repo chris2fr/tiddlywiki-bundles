@@ -4,8 +4,8 @@ tags: $:/tags/Exporter HowWowNow/Bundles
 title: $:/plugins/howwownow/bundles/export
 type: text/vnd.tiddlywiki
 
-\define renderContent( authorShortName:"""MeMyselfAndI""" wikiShortName:"""MyWiki""" )
-<$text text=<<tiddlersForPlugoutFormat filter:"""$(exportFilter)$""" authorShortName:"""$authorShortName$""" wikiShortName:"""$wikiShortName$""">>/>
+\define renderContent( authorShortName:"""MeMyselfAndI""" wikiShortName:"""MyWiki""" plugout:"""MyWiki""" )
+<$text text=<<tiddlersForPlugoutFormat filter:"""$(exportFilter)$""" authorShortName:"""$authorShortName$""" wikiShortName:"""$wikiShortName$""" plugout:"""$plugout$""">>/>
 \end
 author: {{$:/config/howwownow/bundles/AuthorNaturalName}}
 description: {{$:/config/howwownow/bundles/WikiNaturalName}}
