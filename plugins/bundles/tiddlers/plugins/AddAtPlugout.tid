@@ -1,0 +1,6 @@
+title: $:/plugins/howwownow/bundles/AddAtPlugout
+tags: $:/tags/EditTemplate
+listItem: +@
+caption: +@
+
+{{!!title}}@{{!!plugout}}
