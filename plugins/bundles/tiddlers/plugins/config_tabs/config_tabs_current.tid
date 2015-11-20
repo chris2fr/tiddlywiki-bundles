@@ -18,6 +18,7 @@ caption: configuration
 | [[Title|$:/config/howwownow/bundles/Title]]|{{$:/config/howwownow/bundles/Title}}|
 | [[WikiNaturalName|$:/config/howwownow/bundles/WikiNaturalName]]|<$edit-text tiddler="$:/config/howwownow/bundles/WikiNaturalName" tag="input" type="text" default={{$:/SiteSubtitle}} size="50"/><br/>One-line description (will be plugin name)|
 | [[AuthorNaturalName|$:/config/howwownow/bundles/AuthorNaturalName]]|<$edit-text tiddler="$:/config/howwownow/bundles/AuthorNaturalName" tag="input" type="text" size="50"/><br/>Email convention is good "John Smith &lt;john.smith@example.com&gt;"|
+| [[Plugout]|$:/config/howwownow/bundles/Plugout]]|<$edit-text tiddler="$:/config/howwownow/bundles/Plugout" tag="input" type="text" size="30"/><br/>The value of the utility field "plugout"|
 | [[List|$:/config/howwownow/bundles/List]]|{{$:/config/howwownow/bundles/List}}|
 | [[Version|$:/config/howwownow/bundles/Version]]|{{$:/config/howwownow/bundles/Version}}|
 | <$macrocall $name="renderSearchButton" label="Filter" searchFilter={{$:/config/howwownow/bundles/Filter}} />|<$edit-text tiddler="$:/config/howwownow/bundles/Filter" tag="input" type="text" default="[all[tiddlers]]" size="50"/>|

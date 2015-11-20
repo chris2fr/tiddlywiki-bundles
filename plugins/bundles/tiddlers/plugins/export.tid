@@ -17,4 +17,4 @@ version: {{$:/config/howwownow/bundles/Version}}
 """
 
 """
-<$macrocall $name="renderContent" authorShortName={{$:/config/howwownow/bundles/AuthorShortName}}  wikiShortName={{$:/config/howwownow/bundles/WikiShortName}}/>
+<$macrocall $name="renderContent" authorShortName={{$:/config/howwownow/bundles/AuthorShortName}}  wikiShortName={{$:/config/howwownow/bundles/WikiShortName}} plugout={{$:/config/howwownow/bundles/Plugout}}/>

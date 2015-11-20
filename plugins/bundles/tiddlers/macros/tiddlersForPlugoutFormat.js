@@ -24,14 +24,17 @@ exports.params = [
 	{name: "wikiShortName",
 	default: "MyWiki"},
 	{name: "authorShortName",
-	default: "MeMyselfAndI"}
+	default: "MeMyselfAndI"},
+	{name: "plugout",
+    default: "MyWiki"
+	}
 ];
 
 /*
 Run the macro
 Returns a Plugin-compatible {tidlers{}} json string with a couple of additions
 */
-exports.run = function(filter, wikiShortName, authorShortName) {
+exports.run = function(filter, wikiShortName, authorShortName, plugout) {
 	var data = {tiddlers: {}};
 	var tiddlers = this.wiki.filterTiddlers(filter);
 	// Used as a flag and a plugout field value
@@ -48,7 +51,7 @@ exports.run = function(filter, wikiShortName, authorShortName) {
 			data["tiddlers"][fields["title"]] = fields;
 			// Adding of a specific field (perhaps more elegant)
 			// A little belt and suspenders with the tag appending
-			fields["plugout"] = wikiAuthorTitle;
+			fields["plugout"] = plugout;
 			// Adding of "ExtraTag"
 			if (!("tags" in data["tiddlers"][fields["title"]])) {
 			   data["tiddlers"][fields["title"]]["tags"] = "";

@@ -12,3 +12,4 @@ List: readme deltas
 ReadMe: Default Readme File.
 Filter: [!prefix[$]]
 DiffShadow/RequiredField: plugout
+Plugout: MyWiki

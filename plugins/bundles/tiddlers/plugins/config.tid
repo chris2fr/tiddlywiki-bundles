@@ -7,6 +7,7 @@ Save bundle as
 <$action-sendmessage $message="tm-new-tiddler" title="$:/config/howwownow/bundles/mybundles/$targetBundleName$" tags="" text="This is the $targetBundleName$ bundle." wikishortname={{$:/config/howwownow/bundles/WikiShortName}} wikinaturalname={{$:/config/howwownow/bundles/WikiNaturalName}} authorshortname={{$:/config/howwownow/bundles/AuthorShortName}} authornaturalname={{$:/config/howwownow/bundles/AuthorNaturalName}}
 filter={{$:/config/howwownow/bundles/Filter}}
 savename="""$targetBundleName$"""
+plugout={{$:/config/howwownow/bundles/Plugout}}
 text={{$:/config/howwownow/bundles/ReadMe}}/>
 </$button>
 \end
@@ -26,6 +27,7 @@ text={{$:/config/howwownow/bundles/ReadMe}}/>
 <$action-setfield $tiddler="""$:/config/howwownow/bundles/AuthorNaturalName""" text=<<checkNaturalName naturalName:"""$userName$""">>/>
 <$action-setfield $tiddler="""$:/config/howwownow/bundles/Filter""" text="[!prefix[$]]"/>
 <$action-setfield $tiddler="""$:/config/howwownow/bundles/ReadMe""" text={{$:/SiteSubtitle}}/>
+<$action-setfield $tiddler="""$:/config/howwownow/bundles/Plugout""" text={{$:/siteTitle}}/>
 <$action-setfield $tiddler="""$:/temp/howwownow/bundles/targetBundleName""" text=<<checkShortName shortName:$siteTitle$>>/>
 \end
 

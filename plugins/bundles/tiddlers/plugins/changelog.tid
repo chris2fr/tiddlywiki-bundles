@@ -3,6 +3,13 @@ type: text/vnd.tiddlywiki
 
 !Bundles ChangeLog
 
+!!Release 0.0.18
+
+2015-11-15
+
+* Added Unshadow button using plugout field
+* Added Plugout parameter for plugout field
+
 !!Release 0.0.17
 
 2015-11-15

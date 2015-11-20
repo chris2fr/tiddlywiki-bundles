@@ -1,0 +1,14 @@
+title: $:/plugins/howwownow/bundles/Unshadow
+tags: $:/tags/ViewTemplate
+
+\define unshadowButton( whichWiki )
+<$list filter="[[$(currentTiddler)$]is[shadow]!is[tiddler]]">
+<$button>
+Unshadow
+<$action-setfield $tiddler="""$(currentTiddler)$""" title="""$(currentTiddler)$@$whichWiki$""" text={{$(currentTiddler)$}}/>
+<$action-navigate $to="$(currentTiddler)$@$whichWiki$"/>
+</$button>
+</$list>
+\end
+
+<$macrocall $name="unshadowButton" whichWiki={{!!plugout}}/>
