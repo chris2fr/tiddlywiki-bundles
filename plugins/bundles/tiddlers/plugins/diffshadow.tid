@@ -2,7 +2,7 @@ title: $:/plugins/howwownow/bundles/DiffShadow
 type: text/vnd.tiddlywiki
 
 \define showDiff( source requiredField )
-<$list filter="[title[$source$]has[$requiredField$]is[tiddler]!prefix[diff/]]">
+<$list filter="[title[$source$]has[$requiredField$]is[tiddler]is[shadow]!prefix[diff/]]">
 <$button>
 Diff
 <$action-sendmessage $message="tm-close-other-tiddlers"/>
