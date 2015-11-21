@@ -1,0 +1,13 @@
+title: UnAt
+tags: $:/tags/ViewTemplate
+
+\define renderButton ( )
+<$button>
+-@
+<$action-sendmessage $message="tm-close-other-tiddlers"/>
+<$action-navigate $to=<<unAt title:{{!!title}}>>/>
+</$button>
+\end
+
+<$macrocall $name="renderButton"/>
+
