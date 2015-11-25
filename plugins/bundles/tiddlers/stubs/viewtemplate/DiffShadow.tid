@@ -1,4 +1,4 @@
-title: $:/config/howwownow/bundles/stubs/viewtemplate/DiffShadow
+title: $:/stubs/howwownow/bundles/stubs/viewtemplate/DiffShadow
 type: text/vnd.tiddlywiki
 
 {{||$:/plugins/howwownow/bundles/DiffShadow}}

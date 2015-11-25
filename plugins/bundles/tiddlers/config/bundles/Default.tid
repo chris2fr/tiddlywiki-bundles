@@ -1,11 +1,11 @@
-title: $:/config/howwownow/bundles/bundles/default
+title: $:/config/howwownow/bundles/bundles/Default
 tags: $:/config/howwownow/bundles
 type: text/vnd.tiddlywiki
 wikishortname: DefaultWikiShortName
 authorshortname: DefaultAuthorShortName
 wikinaturalname: Default Wiki Natural Name
 authornaturalname: Default Author <natural@name.com>
-list: readme deltas
+list: README Deltas
 savename: Default
 filter: [all[tiddlers]]
 
