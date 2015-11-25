@@ -28,3 +28,5 @@ Undiff
 
 
 <$macrocall $name="showDiff" source={{!!title}} requiredField={{$:/config/howwownow/bundles/DiffShadow/RequiredField}} />
+
+{{$:/plugins/howwownow/bundles/AddAtPlugout}}

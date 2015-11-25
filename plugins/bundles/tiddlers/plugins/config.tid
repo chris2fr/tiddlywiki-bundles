@@ -1,4 +1,4 @@
-title: $:/plugins/howwownow/bundles/config
+title: $:/plugins/howwownow/bundles/Config
 type: text/vnd.tiddlywiki
 
 \define renderSaveBundleButton( targetBundleName )

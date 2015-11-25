@@ -15,6 +15,10 @@ Filter condition to show Diff button <$edit-text tiddler="$:/config/howwownow/bu
 
 <$checkbox tag="$:/tags/SideBar" tiddler="$:/config/howwownow/bundles/sidebar/wrapper"/> Include Plugout ~SideBar. Otherwise, just use the control panel.
 
+!! @ & Un@
+
+<$checkbox tag="$:/tags/ViewTemplate" tiddler="$:/config/howwownow/bundles/stubs/viewtemplate/AtAndUnAt"/>
+
 !! In Place
 
 <$macrocall $name="makeInPlaceExport" authorShortName={{$:/config/howwownow/bundles/AuthorShortName}} wikiShortName={{$:/config/howwownow/bundles/WikiShortName}}/>

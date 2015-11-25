@@ -1,9 +1,8 @@
-title: $:/plugins/howwownow/bundles/AddAtPlugout
-tags: $:/tags/ViewTemplate
+title: $:/plugins/howwownow/bundles/ButtonAddAt
 listItem: +@
 caption: +@
 
-\define addAtPlugout( whichTiddler whichWiki )
+\define renderButtonAddAt( whichTiddler whichWiki )
 <$list filter="[title[$whichTiddler$]is[shadow]has[plugout]]">
 <$button>
 +@
@@ -13,4 +12,4 @@ caption: +@
 </$list>
 \end
 
-<$macrocall $name="addAtPlugout" whichTiddler={{!!title}} whichWiki={{!!plugout}}/>
+<$macrocall $name="renderButtonAddAt" whichTiddler={{!!title}} whichWiki={{!!plugout}}/>
