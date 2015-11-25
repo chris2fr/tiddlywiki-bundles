@@ -3,4 +3,4 @@ type: text/vnd.tiddlywiki
 list-after: $:/core/ui/SideBar/Recent
 caption: Bundles
 
-{{$:/plugins/howwownow/bundles/sidebar}}
+{{$:/plugins/howwownow/bundles/SideBar}}

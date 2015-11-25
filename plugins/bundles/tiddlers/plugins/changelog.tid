@@ -3,6 +3,10 @@ type: text/vnd.tiddlywiki
 
 !Bundles Changelog
 
+!!Release 0.0.19
+
+* Major code reorganization (beware regression)
+
 !!Release 0.0.18
 
 2015-11-15

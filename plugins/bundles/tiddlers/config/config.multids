@@ -7,7 +7,7 @@ AuthorShortName: Plugouts
 WikiNaturalName: My Wiki
 AuthorNaturalName: Me, Myself and I <memyselfandi@example.com>
 Title: $:/plugouts/{{$:/config/howwownow/bundles/AuthorShortName}}/{{$:/config/howwownow/bundles/WikiShortName}}
-Version: 0.1.<<now YYYY0MM0DD0hh0mm>>
+Version: 0.1.<<now YYYY0MM0DD0hh0mm<$macrocall
 List: readme deltas
 README: Default Readme File.
 Filter: [!prefix[$]]

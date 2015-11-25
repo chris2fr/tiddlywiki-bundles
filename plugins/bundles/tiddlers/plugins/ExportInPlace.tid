@@ -2,7 +2,6 @@ created: 20151115181350687
 creator: Christopher Mann <christopher@mann.fr>
 modified: 20151115181911461
 modifier: Christopher Mann <christopher@mann.fr>
-tags: 
 title: $:/plugins/howwownow/bundles/ExportInPlace
 
 <$set name="exportFilter" value={{$:/config/howwownow/bundles/Filter}}>

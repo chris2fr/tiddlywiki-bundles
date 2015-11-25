@@ -1,9 +1,3 @@
-created: 20151115091634064
-creator: Guest
-modified: 20151115092007472
-modifier: Guest
-revision: 1
-tags: Bundles
 title: $:/plugins/howwownow/bundles/Roadmap
 type: text/vnd.tiddlywiki
 
@@ -36,3 +30,5 @@ I would like to version the Wikis through Git on the Plugin server, somehow.
 Perhaps the plugin could be included in the core some day.
 
 Include a search-all function in the sidebar.
+
+Put in place a new search bar that goes through the Bundled Shadows

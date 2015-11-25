@@ -1,11 +1,10 @@
-tags: HowWowNow/Bundles $:/plugins/howwownow/bundles/Configure/Tabs
 title: $:/plugins/howwownow/bundles/Usage
 type: text/vnd.tiddlywiki
 caption: Usage
 
 !Bundles Usage
 
-# ''Before all else'' please configure the name of the export wiki here: [[$:/plugins/howwownow/bundles/config]].
+# ''Before all else'' please configure the name of the export wiki here: [[$:/plugins/howwownow/bundles/Configure]].
 # Export the tiddlers you are interested in via an export dialogue {{$:/core/images/export-button}} (arrow facing up in an open box).
 #* Either all the tiddlers of this ~TiddlyWiki with the "Export All" option in the sidebar
 #* Or results of an $:/AdvancedSearch if you want a subset

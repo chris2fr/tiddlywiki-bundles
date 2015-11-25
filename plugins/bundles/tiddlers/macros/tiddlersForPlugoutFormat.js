@@ -1,5 +1,5 @@
 /*\
-title: $:/plugins/howwownow/bundles/macros/tiddlersForPlugoutFormat
+title: $:/macros/howwownow/bundles/tiddlersForPlugoutFormat
 type: application/javascript
 module-type: macro
 tags: HowWowNow/Bundles

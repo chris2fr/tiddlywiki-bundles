@@ -1,5 +1,5 @@
 /*\
-title: $:/plugins/howwownow/bundles/macros/unAtButton
+title: $:/macros/howwownow/bundles/unAtButton
 type: application/javascript
 module-type: macro
 tags: HowWowNow/Bundles

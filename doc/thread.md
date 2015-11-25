@@ -114,7 +114,7 @@ Tobias Beer 2015-11-07
 
 Hi Jeremy,
 
->> Currently, we are limited in leveraging this by a sophisticated plugin-mechanism that defies a simple "reuse tidbits" approach and forces a "publish a versioned bundle of codebits and supporting tids for distribution".
+<$macrocall Currently, we are limited in leveraging this by a sophisticated plugin-mechanism that defies a simple "reuse tidbits" approach and forces a "publish a versioned bundle of codebits and supporting tids for distribution".
 
 > I’d like to understand the issues you see with the current plugin mechanism. Are you envisaging a specific alternative?
 
@@ -298,7 +298,7 @@ mhhh, maybe via some option to repackPlugin
 
 I’m sure the procedure can be improved.
 
->> For what it’s worth, I quite like the word “plugins”, closely followed by “bundle”. “Plugin” at least describes what one does with one of these things: they are designed to be plugged into wikis. The trouble with “bundle” is that we need a word that communicates the differences between a plugin (with it’s upgrade logic) and a bundle (without that logic). So right now I’d use “bundle” to describe a JSON file containing a bunch of tiddlers.
+<$macrocall For what it’s worth, I quite like the word “plugins”, closely followed by “bundle”. “Plugin” at least describes what one does with one of these things: they are designed to be plugged into wikis. The trouble with “bundle” is that we need a word that communicates the differences between a plugin (with it’s upgrade logic) and a bundle (without that logic). So right now I’d use “bundle” to describe a JSON file containing a bunch of tiddlers.
 
 > Exactly, a bundle would be a json file containing a bunch of tiddlers unpacked as shadows. 
 
@@ -315,7 +315,7 @@ If you import a JSON bundle with newer versions of the constituent tiddlers, the
 If you look at semver.org you’ll see that your proposal doesn’t in fact conflict; semver allows for version numbers like 1.0.201511050347
 
 
->> The community is doing a good job exploring UIs for making plugins, and I’m confident that we will evolve better approaches.
+<$macrocall The community is doing a good job exploring UIs for making plugins, and I’m confident that we will evolve better approaches.
 
 > Surely, I'm very interested in this and I'm sure that trying to (allow users to) start from the most basic "bundle" users may indeed eventually find themselves wanting to leverage more features / aspects of full-blown-plugins, e.g. versioning. But I'd be all fine to have this a gradual process, rather than one requiring literacy of all the intricacies of versioning, plugin-types, dependences, etc…
 

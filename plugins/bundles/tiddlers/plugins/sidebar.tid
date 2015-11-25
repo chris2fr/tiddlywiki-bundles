@@ -1,4 +1,3 @@
-tags: HowWowNow/Bundles
 title: $:/plugins/howwownow/bundles/SideBar
 type: text/vnd.tiddlywiki
 list-after: $:/core/ui/SideBar/Recent
@@ -7,4 +6,4 @@ Coming soon (not yet), a search that includes shadow tiddlers: [ Put Search Box 
 
 ---
 
-{{$:/plugins/howwownow/bundles/config}}
+{{$:/plugins/howwownow/bundles/Configure}}

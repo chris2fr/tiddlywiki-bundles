@@ -1,7 +1,6 @@
-tags: $:/plugins/howwownow/bundles/Configure/Tabs
-title: $:/plugins/howwownow/bundles/readme
+title: $:/plugins/howwownow/bundles/README
 type: text/vnd.tiddlywiki
-caption: readme
+caption: README
 
 <h1>Bundles</h1>
 
@@ -41,3 +40,5 @@ Source : https://github.com/chris2fr/tiddlywiki-bundles/
 <h2>Notes</h2>
 
 This file is maintained in the ./source/readme.tid and copied to ./README.md.
+
+$:/plugins/howwownow/bundles/Defaults and $:/macros/howwownow/bundles/relativeTitle may be extraneous. $:/plugins/howwownow/bundles/Sanitize may not be useful anymore.
