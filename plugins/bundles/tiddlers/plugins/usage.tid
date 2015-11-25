@@ -1,7 +1,7 @@
-tags: HowWowNow/Bundles $:/plugins/howwownow/bundles/config/tabs
-title: $:/plugins/howwownow/bundles/usage
+tags: HowWowNow/Bundles $:/plugins/howwownow/bundles/Configure/Tabs
+title: $:/plugins/howwownow/bundles/Usage
 type: text/vnd.tiddlywiki
-caption: usage
+caption: Usage
 
 !Bundles Usage
 

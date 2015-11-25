@@ -1,4 +1,4 @@
-title: $:/plugins/howwownow/bundles/DiffShadow
+title: $:/plugins/howwownow/bundles/Buttons/DiffShadow
 type: text/vnd.tiddlywiki
 
 \define showDiff( source requiredField )
