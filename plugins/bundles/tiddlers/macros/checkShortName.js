@@ -1,5 +1,5 @@
 /*\
-title: checkShortName
+title: $:/plugins/howwownow/bundles/macros/checkShortName
 type: application/javascript
 module-type: macro
 tags: HowWowNow/Bundles

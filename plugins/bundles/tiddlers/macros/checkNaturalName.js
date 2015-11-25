@@ -1,5 +1,5 @@
 /*\
-title: checkNaturalName
+title: $:/plugins/howwownow/bundles/macros/checkNaturalName
 type: application/javascript
 module-type: macro
 tags: HowWowNow/Bundles

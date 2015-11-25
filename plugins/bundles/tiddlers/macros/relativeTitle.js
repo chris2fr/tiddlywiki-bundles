@@ -1,5 +1,5 @@
 /*\
-title: relativeTitle
+title: $:/plugins/howwownow/bundles/macros/relativeTitle
 type: application/javascript
 module-type: macro
 tags: HowWowNow/Bundles

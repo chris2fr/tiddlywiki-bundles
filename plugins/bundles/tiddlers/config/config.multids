@@ -11,6 +11,6 @@ Version: 0.1.<<now YYYY0MM0DD0hh0mm>>
 List: readme deltas
 README: Default Readme File.
 Filter: [!prefix[$]]
-DiffShadow/RequiredField: plugout
+Buttons/DiffShadow/RequiredField: plugout
 Plugout: MyWiki
-NavToShadowTitleAppendAtButton: {{||$:/plugins/howwownow/bundles/ButtonAtAndUnAt}}
+Buttons/AtAndUnAt: {{||$:/plugins/howwownow/bundles/Buttons/AtAndUnAt}}
