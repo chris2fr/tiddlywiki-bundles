@@ -1,0 +1,12 @@
+title: $:/config/howwownow/bundles/Deltas
+
+\define render ( bundleName )
+Use  $:/AdvancedSearch with this filter `[plugout[$bundleName$]]`
+{{{[plugout[$bundleName$]]}}}
+\end
+
+!Deltas on local wiki
+
+<<render bundleName={{$:/config/howwownow/bundles/Plugout}}>>
+
+
