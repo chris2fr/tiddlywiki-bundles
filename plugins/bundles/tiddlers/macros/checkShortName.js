@@ -1,5 +1,5 @@
 /*\
-title: $:/macros/howwownow/bundles/checkShortName
+title: checkShortName
 type: application/javascript
 module-type: macro
 tags: HowWowNow/Bundles
@@ -25,7 +25,7 @@ Just eliminates non-conform spaces
 Information about this macro
 */
 
-exports.name = "$:/macros/howwownow/bundles/checkShortName";
+exports.name = "checkShortName";
 
 exports.params = [
 	{name: "shortName",

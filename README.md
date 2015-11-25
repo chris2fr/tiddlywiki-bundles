@@ -55,4 +55,4 @@ Include a search-all function in the sidebar.
 
 This file is maintained in the ./source/readme.tid and copied to ./README.md.
 
-$:/plugins/howwownow/bundles/Defaults and $:/macros/howwownow/bundles/relativeTitle may be extraneous. $:/plugins/howwownow/bundles/Sanitize may not be useful anymore.
+$:/plugins/howwownow/bundles/Defaults and relativeTitle may be extraneous. $:/plugins/howwownow/bundles/Sanitize may not be useful anymore.

@@ -1,5 +1,5 @@
 /*\
-title: $:/macros/howwownow/bundles/checkNaturalName"
+title: checkNaturalName
 type: application/javascript
 module-type: macro
 tags: HowWowNow/Bundles
@@ -17,7 +17,7 @@ Macro to output tiddlers matching a filter to Plugin
 Information about this macro
 */
 
-exports.name = "$:/macros/howwownow/bundles/<$macrocall $name="$:/macros/howwownow/bundles/checkNaturalName"";
+exports.name = "checkNaturalName";
 
 exports.params = [
 	{name: "naturalName",

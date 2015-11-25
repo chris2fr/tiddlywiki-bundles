@@ -5,7 +5,7 @@ title: $:/plugins/howwownow/bundles/Export
 type: text/vnd.tiddlywiki
 
 \define renderContent( authorShortName:"""MeMyselfAndI""" wikiShortName:"""MyWiki""" plugout:"""MyWiki""" )
-<$text text=<$macrocall $name="$:/macros/howwownow/bundles/tiddlersForPlugoutFormat" filter:"""$(exportFilter)$""" authorShortName:"""$authorShortName$""" wikiShortName:"""$wikiShortName$""" plugout:"""$plugout$"""<$macrocall/>
+<$text text=<<tiddlersForPlugoutFormat filter:"""$(exportFilter)$""" authorShortName:"""$authorShortName$""" wikiShortName:"""$wikiShortName$""">>/>
 \end
 author: {{$:/config/howwownow/bundles/AuthorNaturalName}}
 description: {{$:/config/howwownow/bundles/WikiNaturalName}}
