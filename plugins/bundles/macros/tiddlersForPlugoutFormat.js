@@ -64,13 +64,13 @@ exports.run = function(filter, wikiShortName, authorShortName, plugout) {
 		}
 	}
 	// adding an extra tiddler for deltas
-	data["tiddlers"][wikiFullPath + "/deltas"] = {
-		"title":wikiFullPath + "/deltas",
+	data["tiddlers"][wikiFullPath + "/Deltas"] = {
+		"title":wikiFullPath + "/Deltas",
 		"tags":wikiAuthorTitle,
 		"text":"!Deltas on local wiki\n\nUse  $:/AdvancedSearch with this filter `[plugout[" + wikiAuthorTitle + "]]`\n\n{{{[plugout[" + wikiAuthorTitle + "]]}}}"
 	};
-	data["tiddlers"][wikiFullPath + "/readme"] = {
-		"title":wikiFullPath + "/readme",
+	data["tiddlers"][wikiFullPath + "/README"] = {
+		"title":wikiFullPath + "/README",
 		"tags":wikiAuthorTitle,
 		"text":this.wiki.getTiddler("$:/config/howwownow/bundles/ReadMe").getFieldString("text")
 	};

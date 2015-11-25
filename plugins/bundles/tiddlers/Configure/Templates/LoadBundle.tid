@@ -1,5 +1,4 @@
-title: $:/plugins/howwownow/bundles/Configure/Tabs/LoadBundleTemplate
-tags: $:/plugins/howwownow/bundles/Configure/Tabs
+title: $:/plugins/howwownow/bundles/Configure/Templates/LoadBundle
 
 \define renderLinkAsText( link text ) [[$text$|$link$]]
 

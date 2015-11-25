@@ -3,7 +3,7 @@
 	"description": "Bundles - Export Tiddlers as a Bundled Plugin",
 	"author": "Christopher Mann <christopher@mann.fr>",
 	"core-version": ">=5.0.0",
-	"list": "readme config usage changelog",
+	"list": "README Configure Usage Changelog",
   "source": "https://github.com/howwownow/tiddlywiki-as-plugin",
 	"version": "0.0.19"
 }

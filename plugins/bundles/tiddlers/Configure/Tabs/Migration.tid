@@ -12,3 +12,8 @@ Tiddlers that were Unshadowed Need to be Renamed or Deleted,
 <$macrocall $name="renderSearchButton" label="Migrate Configuration Tiddlers" searchFilter="[prefix[$:/config/chris2fr/asplugout]]" />
 
 <$macrocall $name="renderSearchButton" label="Migrate Temp Tiddlers" searchFilter="[prefix[$:/temp/chris2fr/asplugout]]" />
+
+<$button>
+Delete $:/config/howwownow/bundles/sidebar/wrapper
+<$action-deletetiddler $tiddler="$:/config/howwownow/bundles/sidebar/wrapper"/>
+</$button>

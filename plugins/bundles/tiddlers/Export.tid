@@ -1,6 +1,6 @@
 description: Plugin Bundle (.tid)
 extension: .tid
-tags: $:/tags/Exporter HowWowNow/Bundles
+tags: $:/tags/Exporter
 title: $:/plugins/howwownow/bundles/Export
 type: text/vnd.tiddlywiki
 

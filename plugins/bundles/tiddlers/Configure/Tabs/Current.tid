@@ -7,8 +7,8 @@ caption: configuration
 
 !! Load Bundle Configuration
 
-<$list filter="[all[tiddlers+shadows]prefix[$:/config/howwownow/bundles/mybundles/]]">
-{{||$:/plugins/howwownow/bundles/config/LoadBundleTemplate}}
+<$list filter="[all[tiddlers+shadows]prefix[$:/config/howwownow/bundles/MyBundles/]]">
+{{||$:/plugins/howwownow/bundles/Configure/Templates/LoadBundle}}
 </$list>
 
 !! Current Bundle Configuration
