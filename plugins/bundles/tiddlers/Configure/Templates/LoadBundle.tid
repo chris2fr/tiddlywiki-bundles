@@ -8,10 +8,9 @@ Load
 <$action-setfield $tiddler="$:/config/howwownow/bundles/WikiNaturalName" text={{!!wikinaturalname}}/>
 <$action-setfield $tiddler="$:/config/howwownow/bundles/AuthorShortName" text={{!!authorshortname}}/>
 <$action-setfield $tiddler="$:/config/howwownow/bundles/AuthorNaturalName" text={{!!authornaturalname}}/>
-<$action-setfield $tiddler="$:/config/howwownow/bundles/Plugout" text={{!!Plugout}}/>
+<$action-setfield $tiddler="$:/config/howwownow/bundles/Plugout" text={{!!plugout}}/>
 <$action-setfield $tiddler="$:/config/howwownow/bundles/Filter" text={{!!filter}}/>
 <$action-setfield $tiddler="$:/temp/howwownow/bundles/targetBundleName" text={{!!savename}}/>
 <$action-setfield $tiddler="$:/config/howwownow/bundles/ReadMe" text={{!!text}}/>
 </$button>
-{{!!savename}}
-<$macrocall $name="renderLinkAsText" link={{!!title}} text="+"/>
+<$macrocall $name="renderLinkAsText" link={{!!title}} text={{!!savename}}/>

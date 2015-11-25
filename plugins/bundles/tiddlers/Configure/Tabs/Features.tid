@@ -17,8 +17,8 @@ Filter condition to show Diff button <$edit-text tiddler="$:/config/howwownow/bu
 
 !! @ & Un@
 
-<$checkbox tag="$:/tags/ViewTemplate" tiddler="$:/stubs/howwownow/bundles/ViewTemplate/AtAndUnAt"/>
+<$checkbox tag="$:/tags/ViewTemplate" tiddler="$:/stubs/howwownow/bundles/ViewTemplate/AtAndUnAt"/> Include +@ and -@ buttons for Shadow Tiddlers in order to not crush the Shadow Tiddler.
 
-!! In Place
+!! In Place Export
 
-<$macrocall $name="makeInPlaceExport" authorShortName={{$:/config/howwownow/bundles/AuthorShortName}} wikiShortName={{$:/config/howwownow/bundles/WikiShortName}}/>
+$:/plugins/howwownow/bundles/ExportInPlace
