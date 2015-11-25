@@ -1,6 +1,6 @@
-title: $:/plugins/howwownow/bundles/config/tabs/configuration
+title: $:/plugins/howwownow/bundles/Configure/Tabs/Configuration
 type: text/vnd.tiddlywiki
-tags: $:/plugins/howwownow/bundles/config/tabs
+tags: $:/plugins/howwownow/bundles/Configure/Tabs
 caption: configuration
 
 ! Configure Your Bundles
@@ -22,11 +22,11 @@ caption: configuration
 | [[List|$:/config/howwownow/bundles/List]]|{{$:/config/howwownow/bundles/List}}|
 | [[Version|$:/config/howwownow/bundles/Version]]|{{$:/config/howwownow/bundles/Version}}|
 | <$macrocall $name="renderSearchButton" label="Filter" searchFilter={{$:/config/howwownow/bundles/Filter}} />|<$edit-text tiddler="$:/config/howwownow/bundles/Filter" tag="input" type="text" default="[all[tiddlers]]" size="50"/>|
-| [[ReadMe|$:/config/howwownow/bundles/ReadMe]]|$:/config/howwownow/bundles/ReadMe|
+| [[README|$:/config/howwownow/bundles/README]]|$:/config/howwownow/bundles/README|
 
 <$button>
 Normalize Configuration Variables
-{{$:/plugins/howwownow/bundles/config/sanitize}}
+{{$:/plugins/howwownow/bundles/config/Sanitize}}
 </$button>
 
 <$button>

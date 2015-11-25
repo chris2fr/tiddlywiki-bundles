@@ -1,6 +1,6 @@
-title: $:/plugins/howwownow/bundles/config/tabs/installed
+title: $:/plugins/howwownow/bundles/Configure/Tabs/Installed
 type: text/vnd.tiddlywiki
-tags: $:/plugins/howwownow/bundles/config/tabs
+tags: $:/plugins/howwownow/bundles/Configure/Tabs
 caption: installed
 
 ! Installed Bundles

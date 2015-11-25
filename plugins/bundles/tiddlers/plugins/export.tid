@@ -1,7 +1,7 @@
 description: Plugin Bundle (.tid)
 extension: .tid
 tags: $:/tags/Exporter HowWowNow/Bundles
-title: $:/plugins/howwownow/bundles/export
+title: $:/plugins/howwownow/bundles/Export
 type: text/vnd.tiddlywiki
 
 \define renderContent( authorShortName:"""MeMyselfAndI""" wikiShortName:"""MyWiki""" plugout:"""MyWiki""" )

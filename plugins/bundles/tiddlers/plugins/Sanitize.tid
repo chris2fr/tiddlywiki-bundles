@@ -1,5 +1,5 @@
 tags: HowWowNow/Bundles
-title: $:/plugins/howwownow/bundles/config/sanitize
+title: $:/plugins/howwownow/bundles/config/Sanitize
 type: text/vnd.tiddlywiki
 
 <$set name="shortName" value={{$:/config/howwownow/bundles/WikiShortName}}><<renderCheckShortName targetTiddler:"$:/config/howwownow/bundles/WikiShortName" shortName:"""$(shortName)$""">><$set name="shortName" value={{$:/config/howwownow/bundles/AuthorShortName}}><<renderCheckShortName targetTiddler:"$:/config/howwownow/bundles/AuthorShortName" shortName:"""$(shortName)$""">></$set><$set name="naturalName" value={{$:/config/howwownow/bundles/WikiNaturalName}}><<renderCheckNaturalName targetTiddler:"$:/config/howwownow/bundles/WikiNaturalName" naturalName:"""$(naturalName)$""">></$set><$set name="naturalName" value={{$:/config/howwownow/bundles/AuthorNaturalName}}><<renderCheckNaturalName targetTiddler:"$:/config/howwownow/bundles/AuthorNaturalName" naturalName:"""$(naturalName)$""">></$set>

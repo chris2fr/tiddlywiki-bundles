@@ -1,4 +1,4 @@
-title: UnAt
+title: $:/plugins/howwownow/bundles/Buttons/UnAt
 
 <$macrocall $name="unAtButton" title={{!!title}}/>
 

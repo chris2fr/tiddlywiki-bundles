@@ -1,7 +1,7 @@
 title: $:/plugins/howwownow/bundles/Changelog
 type: text/vnd.tiddlywiki
 
-!Bundles ChangeLog
+!Bundles Changelog
 
 !!Release 0.0.18
 
@@ -10,6 +10,7 @@ type: text/vnd.tiddlywiki
 * Added Unshadow button using plugout field
 * Added Plugout parameter for plugout field
 * Fixed +@ and -@ stuff
+* File reorganization
 
 !!Release 0.0.17
 

@@ -1,6 +1,6 @@
-title: $:/plugins/howwownow/bundles/config/tabs/migration
+title: $:/plugins/howwownow/bundles/Configure/Tabs/Migration
 type: text/vnd.tiddlywiki
-tags: $:/plugins/howwownow/bundles/config/tabs
+tags: $:/plugins/howwownow/bundles/Configure/Tabs
 caption: migration
 
 ! Migration Helper After Name Change (Temporary)

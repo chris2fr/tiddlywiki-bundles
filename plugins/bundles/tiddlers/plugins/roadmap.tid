@@ -4,7 +4,7 @@ modified: 20151115092007472
 modifier: Guest
 revision: 1
 tags: Bundles
-title: $:/plugins/howwownow/bundles/roadmap
+title: $:/plugins/howwownow/bundles/Roadmap
 type: text/vnd.tiddlywiki
 
 BundlesUiImprovements
@@ -13,7 +13,7 @@ Add Another Search Bar To Include Shadows or Have the Main Search Bar Include Bu
 
 Rename Plugouts to Bundles in Export
 
-Factor Out this [[RoadMap|$:/plugins/howwownow/bundles/roadmap]] File from [[ReadMe|$:/plugins/howwownow/bundles/readme]] and Transclude Accordingly
+Factor Out this [[RoadMap|$:/plugins/howwownow/bundles/Roadmap]] File from [[README|$:/plugins/howwownow/bundles/README]] and Transclude Accordingly
 
 UseRealDiff
 

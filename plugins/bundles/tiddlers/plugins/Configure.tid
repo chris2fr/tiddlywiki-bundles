@@ -1,14 +1,14 @@
-title: $:/plugins/howwownow/bundles/Config
+title: $:/plugins/howwownow/bundles/Configure
 type: text/vnd.tiddlywiki
 
 \define renderSaveBundleButton( targetBundleName )
 <$button>
 Save bundle as
-<$action-sendmessage $message="tm-new-tiddler" title="$:/config/howwownow/bundles/mybundles/$targetBundleName$" tags="" text="This is the $targetBundleName$ bundle." wikishortname={{$:/config/howwownow/bundles/WikiShortName}} wikinaturalname={{$:/config/howwownow/bundles/WikiNaturalName}} authorshortname={{$:/config/howwownow/bundles/AuthorShortName}} authornaturalname={{$:/config/howwownow/bundles/AuthorNaturalName}}
+<$action-sendmessage $message="tm-new-tiddler" title="$:/config/howwownow/bundles/MyBundles/$targetBundleName$" tags="" text="This is the $targetBundleName$ bundle." wikishortname={{$:/config/howwownow/bundles/WikiShortName}} wikinaturalname={{$:/config/howwownow/bundles/WikiNaturalName}} authorshortname={{$:/config/howwownow/bundles/AuthorShortName}} authornaturalname={{$:/config/howwownow/bundles/AuthorNaturalName}}
 filter={{$:/config/howwownow/bundles/Filter}}
 savename="""$targetBundleName$"""
 plugout={{$:/config/howwownow/bundles/Plugout}}
-text={{$:/config/howwownow/bundles/ReadMe}}/>
+text={{$:/config/howwownow/bundles/README}}/>
 </$button>
 \end
 
@@ -39,4 +39,4 @@ $label$
 </$button>
 \end
 
-<<tabs "[all[shadows+tiddlers]tag[$:/plugins/howwownow/bundles/config/tabs]]" "$:/plugins/howwownow/bundles/config/tabs/configuration" "$:/state/howwownow/bundles/config/tab" "tc-vertical">>
+<<tabs "[all[shadows+tiddlers]tag[$:/plugins/howwownow/bundles/Configure/Tabs]]" "$:/plugins/howwownow/bundles/Configure/Tabs/Configuration" "$:/state/howwownow/bundles/Config/Tab" "tc-vertical">>

@@ -1,4 +1,4 @@
-title: $:/config/howwownow/bundles/sidebar/wrapper
+title: $:/stubs/howwownow/bundles/SideBar
 type: text/vnd.tiddlywiki
 list-after: $:/core/ui/SideBar/Recent
 caption: Bundles

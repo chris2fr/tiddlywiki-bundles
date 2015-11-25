@@ -1,0 +1,24 @@
+title: $:/plugins/howwownow/bundles/Configure/Tabs/Features
+type: text/vnd.tiddlywiki
+tags: $:/plugins/howwownow/bundles/Configure/Tabs
+caption: features
+
+! Features
+
+!! Diff Shadow
+
+<$checkbox tag="$:/tags/ViewTemplate" tiddler="$:/stubs/howwownow/bundles/ViewTemplate/DiffShadow"/> Include Diff Feature for Individual Tiddlers from View Mode
+
+Filter condition to show Diff button <$edit-text tiddler="$:/config/howwownow/bundles/DiffShadow/RequiredField" tag="input" type="text" size="12" default="plugout"/>
+
+!! Sidebar
+
+<$checkbox tag="$:/tags/SideBar" tiddler="$:/stubs/howwownow/bundles/SideBar"/> Include Plugout ~SideBar. Otherwise, just use the control panel.
+
+!! @ & Un@
+
+<$checkbox tag="$:/tags/ViewTemplate" tiddler="$:/stubs/howwownow/bundles/ViewTemplate/AtAndUnAt"/>
+
+!! In Place
+
+<$macrocall $name="makeInPlaceExport" authorShortName={{$:/config/howwownow/bundles/AuthorShortName}} wikiShortName={{$:/config/howwownow/bundles/WikiShortName}}/>
