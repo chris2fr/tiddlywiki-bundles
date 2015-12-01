@@ -1,3 +1,7 @@
+---
+title: $:/plugins/howwownow/bundles/README
+description: This is the common README file for How? Wow! Now Bundles.
+---
 
 <h1>Bundles</h1>
 

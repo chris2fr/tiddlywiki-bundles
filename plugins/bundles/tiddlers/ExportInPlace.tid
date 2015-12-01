@@ -3,6 +3,7 @@ creator: Christopher Mann <christopher@mann.fr>
 modified: 20151115181911461
 modifier: Christopher Mann <christopher@mann.fr>
 title: $:/plugins/howwownow/bundles/ExportInPlace
+description: Called from command line. Renders export as per current bundle configuration.
 
 <$set name="exportFilter" value={{$:/config/howwownow/bundles/Filter}}>
 {{||$:/plugins/howwownow/bundles/Export}}

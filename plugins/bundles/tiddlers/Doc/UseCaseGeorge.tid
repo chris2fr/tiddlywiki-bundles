@@ -1,4 +1,7 @@
-# George wants subwikis to be up-to-date in order to plan his activities transversally.
+title: $:/plugins/howwownow/bundles/Doc/UseCaseGeorge
+description: Use case that launched this whole thing.
+
+! George wants subwikis to be up-to-date in order to plan his activities transversally.
 
 GeorgeGeek is someone who uses an iPad to edit wikis offline. Each wiki is topical, and George can share entire wikis with contacts. It is also easy for George to treat each subject as a separate wiki.
 
@@ -6,9 +9,9 @@ GeorgeGeek is someone who uses an iPad to edit wikis offline. Each wiki is topic
 
 Acceptance criteria is :
 
-1. GeorgeGeek can modify a sub-wiki file
-1. GeorgeGeek can modify a meta-wiki file
-1. GeorgeGeek will consult the sub-wiki tiddler updated from the meta-wiki file
+# GeorgeGeek can modify a sub-wiki file
+# GeorgeGeek can modify a meta-wiki file
+# GeorgeGeek will consult the sub-wiki tiddler updated from the meta-wiki file
 
 Implementation ideas :
 
